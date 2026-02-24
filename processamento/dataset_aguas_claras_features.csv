@@ -1,0 +1,395 @@
+﻿Nome_Predio,Endereco_Oficial,Latitude,Longitude,Distancia_Metro_km,Nome_Metro,Mercados_500m,Escolas_1000m,Parques_800m
+Residencial Portal Das Araucarias,"Portal das Araucárias - R. 30 Sul, 07, Águas Claras DF, 71929-360, Brazil",-15.8398084,-48.0356941,0.61,Concessionárias,1,20,16
+Residencial Araucárias - Bloco A,"R. 20 Sul, Águas Claras DF, 71925-360, Brazil",-15.8414764,-48.0245404,0.45,Águas Claras,1,20,15
+Residencial Araucarias Bloco F,"R. 21 Sul, Águas Claras DF, Brazil",-15.8410203,-48.0258912,0.3,Águas Claras,1,20,16
+Residencial Arquipélago de Abrolhos,"Av. das Araucárias, 1735, Águas Claras DF, 71936-250, Brazil",-15.8365381,-48.0393203,0.17,Concessionárias,4,20,9
+Residencial Real Quality,"R. 13 Sul, Águas Claras DF, 70297-400, Brazil",-15.8403501,-48.0178258,0.41,Arniqueiras,1,20,8
+Condomínio Acqua Village,"Av. das Araucárias, 4155 - Águas Claras Sul, Brasília - DF, 71936-250, Brazil",-15.8347994,-48.0430249,0.35,Estrada Parque,3,20,4
+Condomínio Residencial Portal das Águas - Águas Claras,"Q. 201, 1, Águas Claras DF, 71937-540, Brazil",-15.837977,-48.0124181,0.51,Arniqueiras,1,20,7
+Condomínio Residencial MontSerrat,"CEP - Av. das Araucárias, 1135, Águas Claras DF, 71936-250, Brazil",-15.8387668,-48.01744799999999,0.23,Arniqueiras,2,20,8
+Parque das Águas Residencial Club,"Av. Parque Águas Claras, 3740, Águas Claras DF, 71930-000, Brazil",-15.8383508,-48.03665909999999,0.42,Concessionárias,2,20,11
+Residencial ÁGUAS CLARAS II,"Águas Claras, Federal District, Brasília - Federal District, 71937-000, Brazil",-15.8365152,-48.01109220000001,0.64,Arniqueiras,4,20,7
+"Av. das Araucárias, 2075 (Residencial Araucárias)","Águas Claras, Federal District, Brasília - Federal District, Brazil",-15.838452,-48.0276695,0.2,Águas Claras,0,20,20
+Residencial Quinta das Águas,"Av. Jequitibá, Águas Claras DF, 70297-400, Brazil",-15.8390124,-48.0386825,0.43,Concessionárias,0,20,11
+Residencial Cidade Das Águas,"R. 35 Norte, 5, Águas Claras DF, 71919-000, Brazil",-15.8355886,-48.0372301,0.16,Concessionárias,5,20,10
+Residencial Notre Damep,"R. 9 Norte, Águas Claras DF, 71908-540, Brazil",-15.8351783,-48.0158946,0.21,Arniqueiras,5,20,10
+Residencial Plaza das Águas,"Av. Parque Águas Claras, 3305, Águas Claras DF, 71906-500, Brazil",-15.8355796,-48.0336971,0.53,Concessionárias,3,20,18
+Residencial Via Brisa,"R. 22 Sul, Águas Claras DF, 71916-500, Brazil",-15.8412731,-48.0267656,0.23,Águas Claras,1,20,16
+Residencial Rhodes Aguas Claras,"R. das Pitangueiras - Sul, Brasília - DF, 71938-540, Brazil",-15.8354409,-48.0169592,0.14,Arniqueiras,6,20,11
+Residencial Via Azaleas,"Av. Pau Brasil, 11, Águas Claras DF, 71926-000, Brazil",-15.8411556,-48.02786,0.14,Águas Claras,0,20,18
+Residencial Encontro das Águas,"R. das Paineiras, 8 - bl. A, Águas Claras DF, 71929-180, Brazil",-15.8408175,-48.03451130000001,0.65,Águas Claras,1,20,18
+Condomínio Residencial Recanto das Águas,"R. das Pitangueiras, 7, Águas Claras DF, 71938-540, Brazil",-15.8377821,-48.0161295,0.15,Arniqueiras,5,20,9
+Residencial Pau Brasil,"Av. Pau Brasil, 18, Águas Claras DF, 71916-500, Brazil",-15.8423761,-48.0271986,0.29,Águas Claras,1,20,14
+Condomínio Park Avenue,"R. 20 Sul, 12, Águas Claras DF, 71925-360, Brazil",-15.8412572,-48.0241918,0.48,Águas Claras,1,20,16
+Residencial Dalmo Rebello,"R. 5 Sul, 6, Águas Claras DF, 71937-180, Brazil",-15.8360843,-48.01183200000001,0.56,Arniqueiras,4,20,7
+Residencial Boulevard,"R. 8 Norte, 4 - 6 e 8, Águas Claras DF, 71908-360, Brazil",-15.834635,-48.0144741,0.36,Arniqueiras,5,20,8
+Residencial Stilo,"R. Alecrim, 6 - Loja 3, Águas Claras DF, 71938-720, Brazil",-15.8378364,-48.0169326,0.12,Arniqueiras,3,20,9
+Residencial Sedgwick,"R. 31 Sul, 08, Águas Claras DF, 71929-720, Brazil",-15.8397074,-48.0361057,0.58,Concessionárias,1,20,12
+Residencial Sonho Verde,"R. 12 Sul, Águas Claras DF, 71939-000, Brazil",-15.8381431,-48.017976,0.18,Arniqueiras,2,20,10
+Residencial Tarumã,"Res. Tarumã - R. 9 Sul, 12, Águas Claras DF, 71938-360, Brazil",-15.8371182,-48.0148603,0.24,Arniqueiras,5,20,8
+"Condomínio do Edificio Residencial Netuno - (Águas Claras, DF)","R. 3 Sul, Águas Claras DF, 71936-250, Brazil",-15.8365529,-48.0103759,0.71,Arniqueiras,2,20,4
+Residencial Max Home,"R. 7 Norte, Lotes 3 e 5, Águas Claras DF, 71908-180, Brazil",-15.8350394,-48.0135514,0.42,Arniqueiras,5,20,8
+Condomínio Residencial Piazza di Italia,"R. 9 Sul, 11/13, Águas Claras DF, 71938-360, Brazil",-15.8369545,-48.01523719999999,0.2,Arniqueiras,5,20,9
+Residencial Castro Alves,"R. 22 Sul, 10, Águas Claras DF, 71925-720, Brazil",-15.8411392,-48.02651789999999,0.24,Águas Claras,1,20,16
+Residencial Mirante das Águas,"Águas Claras, Federal District, Brasília - Federal District, 70297-400, Brazil",-15.8361382,-47.9164227,0.73,114 Sul,1,14,6
+Residencial Ravel,"Q 203, Águas Claras DF, 71939-360, Brazil",-15.8402098,-48.0175991,0.39,Arniqueiras,1,20,8
+Residencial Florence,"10, Quadra 203, Águas Claras DF, 71939-360, Brazil",-15.8398426,-48.0156991,0.37,Arniqueiras,2,20,8
+Spain Residence,"R. 25 Sul, 19, Águas Claras DF, 70429-900, Brazil",-15.8427056,-48.03017850000001,0.35,Águas Claras,0,20,14
+Residencial ALL,"Lotes 2 Quadra 208, Q. 208, 4, Águas Claras DF, 71926-500, Brazil",-15.8444658,-48.0284673,0.49,Águas Claras,1,20,13
+Residencial Via Terrazzo,"R. 28, lote 6, Sul, R. 28 Sul, 8 - 1004, Águas Claras DF, 71929-000, Brazil",-15.8415353,-48.0343629,0.65,Águas Claras,0,20,16
+Residencial Mont Vernon,"Res. Mont Vernon - R. 9 Sul, 9, Águas Claras DF, 71938-360, Brazil",-15.8365923,-48.0154966,0.17,Arniqueiras,5,20,9
+Residencial Boulevard Caymmi,"R. 8 Norte, 3, Águas Claras DF, 71908-360, Brazil",-15.8347867,-48.0151249,0.3,Arniqueiras,5,20,10
+Residencial Via Naturale,"Av. Pau Brasil, lote 20, Águas Claras DF, 71926-000, Brazil",-15.8428859,-48.0269041,0.36,Águas Claras,2,20,14
+Condomínio do Edifício Residencial Rafaela,"R. 12 Sul, 16 Sul, Águas Claras DF, 71939-000, Brazil",-15.838515,-48.0176531,0.21,Arniqueiras,2,20,10
+Condomínio Residencial Natália Valois,"Av. Parque Águas Claras, 3825 - lote 3825, Águas Claras DF, 71930-000, Brazil",-15.8392632,-48.03671790000001,0.5,Concessionárias,1,20,11
+Residencial Le Ciel,"R. 25 Sul, 13-15, Águas Claras DF, 71928-180, Brazil",-15.8420165,-48.03026149999999,0.29,Águas Claras,0,20,14
+Residencial Bella Fiore,"Q 201, Águas Claras DF, 71937-540, Brazil",-15.8383273,-48.0113897,0.63,Arniqueiras,1,20,6
+Residencial Jales Machado,"R. 8 Sul, 9, Águas Claras DF, 71938-180, Brazil",-15.8365413,-48.01458150000001,0.27,Arniqueiras,4,20,9
+Condomínio Residencial Águas De Cabo Branco,"R. 9 Sul, 15, Águas Claras DF, 71938-360, Brazil",-15.8372578,-48.0150521,0.22,Arniqueiras,5,20,8
+Residencial APÊ,"Q. 101, Águas Claras DF, 51906-750, Brazil",-15.8321285,-48.0105188,0.87,Arniqueiras,4,20,3
+Residencial Atol das Rocas,"RESIDENCIAL ATOL DAS ROCAS - Avenida das Castanheiras, Quadra 101, n° 350, Norte, Águas Claras Cep 71.900-100, Brasília - DF, Brazil",-15.8335693,-48.0106766,0.77,Arniqueiras,4,20,5
+Condomínio Res. Castanheiras,"Condomínio Res. Castanheiras - R. Ipê Amarelo, Águas Claras DF, 71908-000, Brazil",-15.8347203,-48.01258259999999,0.53,Arniqueiras,4,20,7
+Residencial Parque Águas Claras,"Res. Parque Águas Claras - 71901-040, Av. Parque Águas Claras Quadra 301 Conjunto 4, Águas Claras DF, 71901-040, Brazil",-15.8296602,-48.0126794,0.92,Arniqueiras,1,20,3
+Residencial Madison,"Q. 101, Águas Claras DF, 71906-500, Brazil",-15.8380917,-48.0368846,0.38,Concessionárias,3,20,11
+Condomínio do Edifício Residencial Parque das Águas,"R. 14 Norte, 3 - ap Escri - Taguatinga, Brasília - DF, 71910-000, Brazil",-15.8374508,-48.0201832,0.34,Arniqueiras,2,20,13
+Residencial Parque das Águias,"Q. 105, Águas Claras DF, 71915-250, Brazil",-15.8359492,-48.0298052,0.48,Águas Claras,1,20,18
+Residencial Park das Veredas,"Q. 103 Ae - Entre a Rua 9 e 11 Sul, Águas Claras DF, 71936-250, Brazil",-15.8368826,-48.015102,0.21,Arniqueiras,5,20,9
+Residencial The Park,"R. 17 Norte, 3, Águas Claras DF, 71910-540, Brazil",-15.8382994,-48.0224949,0.61,Arniqueiras,1,20,17
+Sublime Mirante Residence,"Q. 106, Águas Claras DF, 71906-500, Brazil",-15.8358843,-48.0308945,0.53,Águas Claras,1,20,19
+Condomínio Residencial Oliveira Bragança,"Q. 301, Águas Claras DF, 71930-000, Brazil",-15.830398,-48.017379,0.71,Arniqueiras,2,20,8
+Victor Hugo Residencial,"Q. 105, Águas Claras DF, Brazil",-15.8358985,-48.0287947,0.46,Águas Claras,1,20,18
+Residencial Flamboyant,"Q. 106, Águas Claras DF, 71928-720, Brazil",-15.8358446,-48.0313036,0.56,Águas Claras,1,20,19
+Residencial Firenze,"Q. 104, Águas Claras DF, 71906-500, Brazil",-15.8340951,-48.0189492,0.36,Arniqueiras,5,20,14
+Maison Parc Residence,"R. Buriti, LT 2/4, Águas Claras DF, 71910-180, Brazil",-15.83913,-48.020145,0.42,Arniqueiras,2,20,12
+CONDOMINIO RESIDENCIAL BRAHMS,"Q. 104, Águas Claras DF, 71906-500, Brazil",-15.8340951,-48.0189492,0.36,Arniqueiras,5,20,14
+Residencial Parque do Arvoredo,"Q. 105, Águas Claras DF, 71915-250, Brazil",-15.8359492,-48.0298052,0.48,Águas Claras,1,20,18
+Residencial Antares Club,"Av. Parque Águas Claras, 3820, Águas Claras DF, 71906-500, Brazil",-15.8392071,-48.0372687,0.48,Concessionárias,0,20,12
+Residencial Acqua Bella,"Q. 301 Lotes 4 e 6, Águas Claras DF, 71901-080, Brazil",-15.8310003,-48.0150508,0.67,Arniqueiras,3,20,8
+Edifício Morada Nobre,"Av. Parque Águas Claras, 405 - 405 - Norte, Águas Claras DF, 71906-500, Brazil",-15.83093,-48.0138622,0.73,Arniqueiras,4,20,8
+Residencial Ouro Branco,"Q 102 Norte Q 102 Lote, Águas Claras DF, 71907-000, Brazil",-15.8322363,-48.0132222,0.65,Arniqueiras,5,20,7
+Residencial Acácias,"71901-330, Alameda Gravatá Quadra 301 Conjunto 5, 8 - Lote 6, Águas Claras DF, 71901-330, Brazil",-15.8291202,-48.0140551,0.91,Arniqueiras,2,20,5
+Residencial Lucas,"Q. 301, Águas Claras DF, 71901-040, Brazil",-15.8312698,-48.0153773,0.63,Arniqueiras,3,20,8
+Residencial New York by Victória,"R. 30 Norte, 1, Águas Claras DF, 71918-180, Brazil",-15.8371405,-48.0326976,0.56,Águas Claras,1,20,19
+Residencial Vitória,"Q 204, Águas Claras DF, 71939-540, Brazil",-15.8412835,-48.0185082,0.53,Arniqueiras,1,20,8
+Cond. Residencial Aguas Claras I,"R. 3 Sul, Águas Claras DF, 71936-750, Brazil",-15.8365529,-48.0103759,0.71,Arniqueiras,2,20,4
+Residencial Villeneuve,"Q. 104, Águas Claras DF, 71909-180, Brazil",-15.834496,-48.0195169,0.36,Arniqueiras,3,20,14
+Residencial Hanna,"Q. 301 Conjunto 14, Águas Claras DF, 71901-270, Brazil",-15.8292268,-48.0153506,0.85,Arniqueiras,2,20,6
+Residencial Eliane Fleury,"Q. 101, Águas Claras DF, 71907-180, Brazil",-15.8324938,-48.0111752,0.79,Arniqueiras,4,20,5
+Residencial Verdes Brasil,"Q 102 Praça Perdiz Quadra 102, Águas Claras DF, 71907-000, Brazil",-15.8325506,-48.0134693,0.6,Arniqueiras,5,20,7
+Residencial Le Grand Valle,"R. 21 Norte, 1, Águas Claras DF, 71916-000, Brazil",-15.8386533,-48.0261782,0.29,Águas Claras,0,20,17
+Art Life Bem-te-vi,"Qd. 105 Norte Lt. 5/7 Praca Bem-te-vi 71915-250, Águas Claras DF, 71917-180, Brazil",-15.8353699,-48.0285666,0.52,Águas Claras,1,20,19
+Residencial Montpellier,"Q 102, Águas Claras DF, 71907-000, Brazil",-15.8322034,-48.01324899999999,0.65,Arniqueiras,5,20,7
+Residencial Ipês,"0 Q. 103 - Norte, Q. 103 Res. Ipês Ap.504 - Norte, Brasília - DF, 71909-000, Brazil",-15.8336651,-48.0170611,0.34,Arniqueiras,4,20,12
+Residencial Mozart QD 103,"10, Águas Claras DF, 71909-000, Brazil",-15.8333936,-48.01665810000001,0.37,Arniqueiras,4,20,10
+residencial boullevard,"Águas Claras, Federal District, Brasília - Federal District, 71925-000, Brazil",-15.8423351,-48.0230018,0.64,Águas Claras,2,20,12
+Residencial Modern Life,"R. 5 Norte, 4, Águas Claras DF, 71907-720, Brazil",-15.8350763,-48.0117372,0.6,Arniqueiras,4,20,6
+Cittá Residence,"R. 13 Norte, 1/3, Águas Claras DF, 71909-720, Brazil",-15.8367667,-48.0192754,0.24,Arniqueiras,2,20,14
+Residencial Cervantes,"R. 8 Norte, 02, Águas Claras DF, 71900-100, Brazil",-15.8343312,-48.0144538,0.39,Arniqueiras,5,20,9
+Condomínio Residencial Dirceu da Rocha Tavares,"R. 9 Norte, 4, Águas Claras DF, 71908-540, Brazil",-15.8348796,-48.0156659,0.25,Arniqueiras,5,20,10
+Residencial Marcílio Bione,"R. 8 Norte, 07, Águas Claras DF, 71908-360, Brazil",-15.8353418,-48.0149373,0.27,Arniqueiras,5,20,9
+Residencial Riviera,"Rua 18 Lote 07, R. 18 Norte, 7, Águas Claras DF, 71910-720, Brazil",-15.8388504,-48.02329030000001,0.57,Águas Claras,2,20,16
+Edifício Jardim Brasil,"R. 7 Norte, Lt. 01, Águas Claras DF, 71908-180, Brazil",-15.8342547,-48.01384969999999,0.44,Arniqueiras,6,20,8
+Residencial Villa Pavanelli,"R. 9 Norte, 3, Águas Claras DF, 71908-540, Brazil",-15.8351717,-48.0162798,0.19,Arniqueiras,6,20,10
+Edifício The Prime,"Residencial the Prime - rua 24 norte 2, Av. Pau Brasil, 1, Águas Claras DF, 71916-750, Brazil",-15.8375841,-48.0285631,0.27,Águas Claras,1,20,19
+Residencial Sunset Boulevard,"R. 37 Sul, 09, Águas Claras DF, 71931-540, Brazil",-15.8351905,-48.0395413,0.1,Concessionárias,6,20,8
+Duo Residence Mall,"R. 19 Norte, Águas Claras DF, 71915-000, Brazil",-15.8390876,-48.0241424,0.47,Águas Claras,1,20,16
+Residencial Shangrilá,"R. 5 Norte, 123, Águas Claras DF, 71907-720, Brazil",-15.8343673,-48.0122536,0.58,Arniqueiras,4,20,5
+Wave Residence,"R. 18 Norte, 71.910 - 720 - Lote 1/3, Águas Claras DF, 71900-100, Brazil",-15.83828,-48.0236153,0.55,Águas Claras,1,20,17
+Condomínio Residencial Monet,"Av. Pau Brasil, Águas Claras DF, 71916-500, Brazil",-15.8421909,-48.0276591,0.25,Águas Claras,1,20,14
+Condomínio do Ed Ônix Multicenter,"Edifício Ônix Multicenter - Av. das Castanheiras, 02 - Bloco C, Águas Claras DF, 71900-100, Brazil",-15.8336908,-48.0121005,0.63,Arniqueiras,4,20,5
+Residencial Blue Moon,"R. 20 Norte, Águas Claras DF, 71915-750, Brazil",-15.8393961,-48.0249721,0.38,Águas Claras,1,20,16
+Condominio Osório de Morais,"R. 8 Norte, Águas Claras DF, 71900-100, Brazil",-15.8345978,-48.0147825,0.34,Arniqueiras,5,20,9
+Residencial Ouro Branco IV,"R. 17 Sul, 7, Águas Claras DF, 71940-360, Brazil",-15.8401144,-48.0216698,0.62,Arniqueiras,2,20,14
+Casablanca Mall Residence,"R. 24 Norte, 13, Águas Claras DF, 71916-750, Brazil",-15.8394569,-48.028974,0.08,Águas Claras,1,20,19
+We Life Style,"R. 22 Norte, LOT 6, Águas Claras DF, 71916-250, Brazil",-15.8392949,-48.0264792,0.23,Águas Claras,0,20,19
+Edifício Real Splendor,"Av. das Castanheiras, 1310, Águas Claras DF, 71900-100, Brazil",-15.8354898,-48.0192883,0.28,Arniqueiras,3,20,14
+Residencial Splendido Life Style,"R. 19 Sul, 14, Águas Claras DF, 71940-720, Brazil",-15.8405575,-48.0231522,0.57,Águas Claras,2,20,13
+Residencial Águas de Manaíra,"R. 24 Norte, Águas Claras DF, 71916-750, Brazil",-15.8384319,-48.0287349,0.18,Águas Claras,1,20,20
+Condomínio Estação 16,"Q. 104, Águas Claras DF, 71900-100, Brazil",-15.8344475,-48.0193044,0.35,Arniqueiras,3,20,14
+Edifício Almirante Ary Parreiras,"R. 16 Norte, 1, Águas Claras DF, 71910-360, Brazil",-15.8375347,-48.02201119999999,0.54,Arniqueiras,1,20,17
+Condomínio Villa Grécia,"R. 3 Norte, Águas Claras DF, 71907-360, Brazil",-15.8343773,-48.0100056,0.8,Arniqueiras,4,20,3
+Condomínio Aqcua Village,"R. 21 Norte, 5, Águas Claras DF, 71916-000, Brazil",-15.8394684,-48.02608069999999,0.26,Águas Claras,1,20,18
+Gavino Residences,"Av. Pau Brasil - Águas Claras norte, Brasília - DF, 71916-500, Brazil",-15.8421909,-48.0276591,0.25,Águas Claras,1,20,14
+Smart Residence Service,"Av. Sibipiruna, 11, Águas Claras DF, 71928-720, Brazil",-15.8445537,-48.03288149999999,0.69,Águas Claras,0,20,12
+Edifício Órion,"Av. Sibipiruna, 32 - ap 902 ed - orion, Brasília - DF, 71928-720, Brazil",-15.8461421,-48.0327727,0.82,Águas Claras,0,20,8
+Residencial Sagres,"Res. Sagres - R. 25 Sul, 11, Águas Claras DF, 71927-180, Brazil",-15.8413269,-48.0302234,0.24,Águas Claras,0,20,15
+Real Urbanlife,"Av. Sibipiruna, 9, Águas Claras DF, 71928-720, Brazil",-15.8436331,-48.0332,0.64,Águas Claras,0,20,14
+Residencial Alto da Boa Vista,"Av. Jacarandá, 08 - Sala 101, Águas Claras DF, 71927-540, Brazil",-15.8418468,-48.0304943,0.3,Águas Claras,0,20,14
+Residencial Uberlândia,"Col. Agrícola Águas Claras - Águas Claras, Federal District, Brasília - Federal District, 71919-700, Brazil",-15.8173982,-47.9980121,1.9,Guará,0,6,0
+Le Ville Residence,"R. 25 Sul, 9, Águas Claras DF, 71927-180, Brazil",-15.8411034,-48.0301059,0.21,Águas Claras,0,20,17
+Residencial Almirante Saldanha da Gama,"rua 24 lote 19, R. 25 Sul, 20, Águas Claras DF, 71928-180, Brazil",-15.8427056,-48.03017850000001,0.35,Águas Claras,0,20,14
+Concept Residence CEP 71927-540,"Av. Jacarandá, 22, Águas Claras DF, 71927-540, Brazil",-15.8470321,-48.0322959,0.88,Águas Claras,0,20,5
+Residencial Paineiras,"R. das Paineiras, 5, Águas Claras DF, 71929-180, Brazil",-15.8393015,-48.0342853,0.63,Águas Claras,1,20,18
+Residencial Bouganville,"R. 30 Sul, Águas Claras DF, 71929-360, Brazil",-15.8396687,-48.0353434,0.62,Concessionárias,1,20,16
+Residencial Costa Verde,"Q 208, Águas Claras DF, 71926-500, Brazil",-15.8456602,-48.0284723,0.62,Águas Claras,1,20,8
+You Life Style,"Av. Jacarandá, 18 - Sul, Brasília - DF, 71927-540, Brazil",-15.8468117,-48.0315861,0.82,Águas Claras,0,20,9
+Residencial Unité,"R. 24 Sul, 21, Águas Claras DF, Brazil",-15.8423079,-48.029346,0.27,Águas Claras,0,20,14
+Residencial Canto do Sabiá,"Q 208, Águas Claras DF, 71926-500, Brazil",-15.8456602,-48.0284723,0.62,Águas Claras,1,20,8
+Viva Águas Claras Residencial Resort,"QS 5, Águas Claras DF, 71960-540, Brazil",-15.8519895,-48.0343241,0.81,Taguatinga Sul,2,20,3
+Edifício Macaúba,"R. Macaúba, Águas Claras DF, 71918-180, Brazil",-15.8437695,-48.0315786,0.53,Águas Claras,0,20,15
+Residencial Imprensa IV,"Q 207, Águas Claras DF, 71926-250, Brazil",-15.8442366,-48.0263315,0.52,Águas Claras,2,20,9
+Residencial Itália,"Q 207 Lote 5, Águas Claras DF, 71926-250, Brazil",-15.8436869,-48.025727,0.5,Águas Claras,2,20,10
+Edifício Villa Lucci,"Av. Jacarandá, 10, Águas Claras DF, 71927-540, Brazil",-15.8421452,-48.0306118,0.33,Águas Claras,0,20,14
+Residencial Diamond,"Q 208, Águas Claras DF, 71926-500, Brazil",-15.8456602,-48.0284723,0.62,Águas Claras,1,20,8
+Condomínio Residencial Siena,"Q. 103, Águas Claras DF, 71906-500, Brazil",-15.8332405,-48.0166098,0.39,Arniqueiras,4,20,10
+Residencial Santorini,"Q 208 - Águas Claras, Federal District, Brasília - Federal District, 71928-720, Brazil",-15.8449558,-48.0278753,0.55,Águas Claras,1,20,12
+Condomínio Solimões,"Encontro da Rua 28 com a, Av. Jequitibá, Águas Claras DF, 71928-720, Brazil",-15.8413188,-48.0345377,0.66,Águas Claras,0,20,16
+Dcampos Residence,"R. Babaçú, Águas Claras DF, 71928-000, Brazil",-15.8430263,-48.0300577,0.37,Águas Claras,0,20,14
+Park Style Mall & Residence,"R. 25 Sul, 30, Águas Claras DF, 71927-180, Brazil",-15.8440631,-48.0293672,0.46,Águas Claras,0,20,12
+Residencial Refinatto,"Q 207 - Águas Claras, Federal District, Brasília - Federal District, 71926-250, Brazil",-15.8442366,-48.0263315,0.52,Águas Claras,2,20,9
+Residencial Villa Lorenza,"R. 22 Norte, 4, Águas Claras DF, 71916-250, Brazil",-15.838964,-48.02651609999999,0.24,Águas Claras,0,20,19
+Condomínio Prime Vivence,"599, Av. Jacarandá, 519, Brasília - DF, Brazil",-15.8441864,-48.0310061,0.53,Águas Claras,0,20,13
+Residencial Ícaro,"Av. Jequitibá, 885, Águas Claras DF, 71929-540, Brazil",-15.8371647,-48.0413439,0.37,Concessionárias,0,20,7
+Edifício Jequitibá,"Av. Jequitibá, 325, Águas Claras DF, 71929-540, Brazil",-15.8401401,-48.0376916,0.57,Concessionárias,0,20,11
+Art Life Graúna,"Q. 209 Lote 3/5, Águas Claras DF, 71930-750, Brazil",-15.8401289,-48.0386172,0.55,Concessionárias,0,20,10
+Residencial Yes,"Q 210, Águas Claras DF, 71931-000, Brazil",-15.8397942,-48.0403573,0.55,Concessionárias,1,20,9
+Residencial Osmar Castanho,"R. 30 Sul, Lote 09, Águas Claras DF, 71929-360, Brazil",-15.8403869,-48.0363991,0.63,Concessionárias,0,20,14
+336 Residencial,"Águas Claras, Federal District, Brasília - Federal District, 71931-360, Brazil",-15.8370063,-48.0392816,0.22,Concessionárias,3,20,9
+Residencial Jequitibá,"40, SMPW Q 3 - Park Way, Brasília - DF, 71735-304, Brazil",-15.8704814,-47.9796728,9999.0,Nenhum,0,8,1
+Residencial Evolution,"Res. Evolution - R. 33 Sul, Águas Claras DF, 71930-250, Brazil",-15.8384579,-48.0376549,0.38,Concessionárias,0,20,10
+Residencial Catharina Iansen,"R. 33 Sul, Águas Claras DF, 71928-720, Brazil",-15.8383413,-48.0373273,0.38,Concessionárias,1,20,11
+RESIDENCIAL ALMIRANTE ARY RONGEL,"R. 31 Sul, Águas Claras DF, 71929-720, Brazil",-15.8388407,-48.0356668,0.52,Concessionárias,1,20,15
+Residencial Mirante Prime,"R. 37 Sul, 06, Águas Claras DF, 71931-540, Brazil",-15.8356368,-48.0392824,0.09,Concessionárias,6,20,8
+Residencial Le Club,"R. 33 Sul, 5, Águas Claras DF, 71930-250, Brazil",-15.8375345,-48.0369353,0.32,Concessionárias,3,20,11
+Residencial Milena Baqui Muniz,"R. 30 Norte, 3, Águas Claras DF, 71918-180, Brazil",-15.8367148,-48.0332009,0.61,Concessionárias,1,20,18
+Residencial Via Paradiso,"R. 28 Norte, 4, Águas Claras DF, 71917-720, Brazil",-15.8380909,-48.0309625,0.34,Águas Claras,1,20,20
+LV31 - Residencial Ligia Valois,"R. 31 Sul, 11, Águas Claras DF, 71929-720, Brazil",-15.8398274,-48.0368674,0.56,Concessionárias,0,20,12
+Residencial Cezanne,"R. 37 Norte, 01, Águas Claras DF, 71919-360, Brazil",-15.8334812,-48.0383558,0.19,Concessionárias,7,20,9
+Residencial Chateau Valois,"R. 36 Sul, lote 17, Águas Claras DF, 71931-360, Brazil",-15.8371795,-48.0397274,0.25,Concessionárias,3,20,9
+Residencial Le Paysage,"R. 34 Sul, 08 - loja 05, Águas Claras DF, 71930-500, Brazil",-15.8377716,-48.0376146,0.31,Concessionárias,2,20,10
+Residencial Cris Village,"Q 210 quadra 210 lote, R. 34 Sul, 2, Águas Claras DF, 71931-000, Brazil",-15.8394416,-48.0396252,0.49,Concessionárias,0,20,9
+Residencial Villa Mateus,"170, R. 35 Sul, 78, Brasília - DF, Brazil",-15.8368785,-48.0384295,0.19,Concessionárias,3,20,10
+Condomínio Residencial Sevilha,"R. 35 Sul, 17, Águas Claras DF, 71931-180, Brazil",-15.8375407,-48.0389934,0.27,Concessionárias,2,20,9
+Residencial Noblesse,"R. 33 Sul, Lote 10, Águas Claras DF, 71930-250, Brazil",-15.8387785,-48.03734069999999,0.43,Concessionárias,0,20,11
+Residencial Mont Blanc,"Q. 209, Águas Claras DF, 71930-750, Brazil",-15.8408557,-48.0388399,0.64,Concessionárias,1,20,9
+Residencial Espanha,"R. 37 Sul, 10, Águas Claras DF, 71931-540, Brazil",-15.8365039,-48.0402072,0.23,Concessionárias,4,20,8
+Mozart Residence,"R. 31 Sul, 9, Águas Claras DF, 71929-720, Brazil",-15.839444,-48.0364927,0.53,Concessionárias,1,20,11
+Residencial Aquamarine,"R. 36 Sul, lote 16, Águas Claras DF, 71931-360, Brazil",-15.8369317,-48.0388388,0.2,Concessionárias,3,20,9
+Condomínio Residencial Villa Pavanelli II,"R. 36 Sul, 13, Águas Claras DF, 71931-360, Brazil",-15.8365106,-48.039359,0.17,Concessionárias,4,20,9
+Condomínio Comercial Águas Claras Center,"Av. Jacarandá, 47, Águas Claras DF, 71927-540, Brazil",-15.8453692,-48.03171,0.69,Águas Claras,0,20,10
+Residencial Esperança,"Av. Jacarandá, 4, Águas Claras DF, 71927-540, Brazil",-15.8410737,-48.030535,0.25,Águas Claras,1,20,15
+Edifício Flamboyant,"Q. 105, Águas Claras DF, 71917-000, Brazil",-15.835896,-48.0291508,0.47,Águas Claras,1,20,18
+Residencial Matheus,"Q. 105, Águas Claras DF, 71928-720, Brazil",-15.8358985,-48.0287947,0.46,Águas Claras,1,20,18
+Residencial Vinícius Serrão,"Q. 105, Águas Claras DF, 71917-000, Brazil",-15.835896,-48.0291508,0.47,Águas Claras,1,20,18
+Condomínio Flamboyant Residence,"Q. 106, Águas Claras DF, 71917-000, Brazil",-15.8365428,-48.0306861,0.46,Águas Claras,1,20,19
+"Residencial Flamboyant, Bloco D","27, Águas Claras DF, 71928-720, Brazil",-15.838452,-48.0276695,0.2,Águas Claras,0,20,20
+Solarium Park,"Avenida Aviador Flamboyant - s/n lt 18 - Norte, Águas Claras DF, 71917-000, Brazil",-15.8383109,-48.0231307,0.6,Águas Claras,1,20,17
+Residencial Exclusive,"Alameda gravatá, Quadra 301, Lote 11, conjunto 8 - Águas Claras Norte, Brasília - DF, 71901-240, Brazil",-15.830551,-48.0177534,0.69,Arniqueiras,1,20,9
+Residencial Luiza,"Q. 301, Águas Claras DF, 71592-000, Brazil",-15.8310145,-48.0150464,0.67,Arniqueiras,3,20,8
+Residencial Beatriz,"Q. 301 Res. Beatriz, Águas Claras DF, 71901-340, Brazil",-15.8299314,-48.0157283,0.77,Arniqueiras,4,20,7
+Edifício Vitória,"Q. 301, Águas Claras DF, 71901-340, Brazil",-15.8302642,-48.0162128,0.73,Arniqueiras,3,20,8
+Residencial Liberté,"Q. 301 Conj. 05 Lt. 02/04, Águas Claras DF, 71901-330, Brazil",-15.8296918,-48.01481039999999,0.82,Arniqueiras,4,20,5
+Condomínio Residencial Canaan Portela,"Q. 301 - Águas Claras Norte, Brasília - DF, 71901-280, Brazil",-15.8295565,-48.0161249,0.8,Arniqueiras,1,20,7
+Residencial Evidence,"Q. 301 lt 1/3 - Taguatinga, Brasília - DF, 71901-060, Brazil",-15.8302908,-48.0175934,0.72,Arniqueiras,1,20,8
+Residencial Bassam,"Q. 301 Residencial Bassam, Águas Claras DF, 71901-240, Brazil",-15.8284188,-48.01363,0.99,Arniqueiras,1,20,5
+Residencial Raphael Muniz,"Q. 301 Conjunto 4 lotes 4/6 040, Águas Claras DF, 71930-000, Brazil",-15.8310145,-48.0150464,0.67,Arniqueiras,3,20,8
+Residencial Keila Alves,"qd 301 conjunto 8 lote 6, Av. Parque Águas Claras, 4, Brasília - DF, 71906-500, Brazil",-15.8355565,-48.0310807,0.57,Águas Claras,1,20,20
+Residencial Ipanema,"Avenida Parque Águas Claras, Quadra 301, Conjunto 10, Lote 5, Norte, Águas Claras DF, 71901-090, Brazil",-15.8308952,-48.0161404,0.66,Arniqueiras,3,20,8
+Residencial Bougainville,"Q. 301 Res. Bouganville, Águas Claras DF, 71901-300, Brazil",-15.8297845,-48.0174642,0.77,Arniqueiras,1,20,7
+Residencial Érika Muniz,"Q. 301 CJ 6 LT 9, Águas Claras DF, 71592-000, Brazil",-15.8291361,-48.0140344,0.9,Arniqueiras,2,20,5
+Residencial Itacaré,"Conj. 8, Q. 301, Águas Claras DF, 71592-000, Brazil",-15.8307088,-48.01518430000001,0.7,Arniqueiras,4,20,8
+Residencial Vale do Rio D’ouro,"Q. 301, Águas Claras DF, 71592-000, Brazil",-15.8310145,-48.0150464,0.67,Arniqueiras,3,20,8
+Residencial Bertolucci - Bloco A,"10, Q. 301, Águas Claras DF, 71901-310, Brazil",-15.8278489,-48.0131027,1.08,Arniqueiras,1,20,4
+Residencial Roberta,"Lote 4/6 - Q. 301 Conjunto 10, Águas Claras DF, 71901-250, Brazil",-15.8286406,-48.01411179999999,0.95,Arniqueiras,2,20,5
+Condomínio Residencial Flor de Lyz,"Q. 301, Águas Claras DF, 71901-320, Brazil",-15.8302642,-48.0162128,0.73,Arniqueiras,3,20,8
+Residencial Villa Clara,"R. Alecrim, 03, Águas Claras DF, 71909-360, Brazil",-15.8360756,-48.0183021,0.15,Arniqueiras,5,20,14
+Residencial Bordeaux,"Q. 301 Res. Bourdeux, Águas Claras DF, 71901-200, Brazil",-15.8297375,-48.0163083,0.78,Arniqueiras,2,20,7
+Residencial Isadora,"Quadra 301 - Conj. 02, lt. 05, 07 e 09, Av. Parque Águas Claras, Águas Claras DF, 71901-030, Brazil",-15.8326731,-48.0180539,0.46,Arniqueiras,4,20,11
+Residencial Olendina Gurgel,"Q. 301 Lotes 1/3, Águas Claras DF, 71592-000, Brazil",-15.830398,-48.017379,0.71,Arniqueiras,2,20,8
+Edificio Monte Verde,"Q. 301, Águas Claras DF, 71901-050, Brazil",-15.8302642,-48.0162128,0.73,Arniqueiras,3,20,8
+Residencial Carlos Gomes,"Q. 103 - Águas Claras, Federal District, Brasília - Federal District, Brazil",-15.8330646,-48.0161273,0.42,Arniqueiras,5,20,10
+Illuminato Residence Mall,"edificio illuminato - R. 9 Norte, 6/8, Águas Claras DF, 71908-540, Brazil",-15.8351356,-48.0155055,0.24,Arniqueiras,5,20,10
+Edifício Itapema,"Q. 301, Águas Claras DF, 71592-000, Brazil",-15.8310145,-48.0150464,0.67,Arniqueiras,3,20,8
+Residencial Bertolucci II,"lote Cep 71.901-320, Alameda Gravatá Quadra 301 Conjunto 3, 7, Águas Claras DF, 71901-320, Brazil",-15.8288691,-48.0123987,1.01,Arniqueiras,1,20,3
+Edifício Lírios do Campo,"Q. 301 Conjunto 6, Águas Claras DF, 71930-000, Brazil",-15.8384148,-48.0358228,0.47,Concessionárias,1,20,12
+Residencial Metropolitan,"R. das Pitangueiras, Lote 10, Águas Claras DF, 71938-540, Brazil",-15.8376093,-48.01592249999999,0.16,Arniqueiras,5,20,9
+Residencial Juriti,"Q. 103 - Águas Claras, Federal District, Brasília - Federal District, 71909-000, Brazil",-15.8333936,-48.01665810000001,0.37,Arniqueiras,4,20,10
+Residencial Alameda dos Eucaliptos I,"EPTG, Águas Claras DF, 71928-720, Brazil",-15.8251128,-48.0269344,1.67,Águas Claras,2,6,4
+Residencial Graciana Amaral,"Q. 107, Águas Claras DF, 71928-720, Brazil",-15.8303315,-48.0321554,0.88,Concessionárias,1,20,7
+Residencial Atlântida I,"R. das Aroeiras, Q. 107 - Lotes 2 e 4, Águas Claras DF, 71920-700, Brazil",-15.8312674,-48.0348812,0.59,Concessionárias,4,20,10
+Riviera dei Fiori Park Life,"Alameda das Acácias, Praça do Tucano, s/n, Brasília - DF, 71920-540, Brazil",-15.8327033,-48.0346268,0.51,Concessionárias,3,20,12
+Edifício das Américas,"Q. 107, Águas Claras DF, 71920-010, Brazil",-15.8306973,-48.0338706,0.71,Concessionárias,2,20,9
+Residencial Alameda dos Eucaliptos 2,"EPTG, Águas Claras DF, 71928-720, Brazil",-15.8251128,-48.0269344,1.67,Águas Claras,2,6,4
+Dominium Residence,"Q. 107 Rua E, 4, Águas Claras DF, 71920-180, Brazil",-15.828058,-48.0290689,1.29,Concessionárias,0,8,6
+Conquest Residence,"Al. dos Eucaliptos Q. 107, 05 - Quadra 107, Lote, Águas Claras DF, 71920-010, Brazil",-15.8301451,-48.0336764,0.77,Concessionárias,1,20,6
+Residencial Primavera,"Al. dos Eucaliptos Q. 107, Quadra 107, 6, Águas Claras DF, 71920-010, Brazil",-15.8307089,-48.0333499,0.75,Concessionárias,1,20,8
+Top Life Club Residence,"R. 36 Norte, 3350, Águas Claras DF, 71919-180, Brazil",-15.8344766,-48.0354085,0.35,Concessionárias,4,20,14
+Residencial Piquiá,"Q. 107 Rua A, 03, Águas Claras DF, 71920-710, Brazil",-15.8305578,-48.03277629999999,0.81,Concessionárias,1,20,8
+Residencial José Ricardo,"Águas Claras, Federal District, Brasília - Federal District, 71920-010, Brazil",-15.8284729,-48.0303258,1.16,Concessionárias,0,10,6
+Residencial das Acácias,"3, Park Way Q 20 - Park Way, Brasília - DF, 70297-400, Brazil",-15.8361382,-47.9164227,0.73,114 Sul,1,14,6
+Residencial Itamaracá,"Q. 107 Rua A, 1 - Lotes 1 e 2, Águas Claras DF, 71920-710, Brazil",-15.8391783,-48.053525,0.74,Praça do Relógio,6,20,4
+Residencial Morada Das Águas,"Q. 104 - Águas Claras, Federal District, Brasília - Federal District, 71909-180, Brazil",-15.834496,-48.0195169,0.36,Arniqueiras,3,20,14
+Building Palladium Residence,"Edifício Palladium - R. das Aroeiras, 1, Águas Claras DF, 71920-700, Brazil",-15.8315718,-48.03491169999999,0.56,Concessionárias,4,20,10
+Residencial Vancouver,"Q. 107 Rua E, Lote 2, Águas Claras DF, 71920-180, Brazil",-15.8283817,-48.0295287,1.23,Concessionárias,0,8,6
+Condominio Orion,"Q 107, Águas Claras DF, 71920-540, Brazil",-15.8306093,-48.0321292,0.86,Concessionárias,1,20,8
+Residencial Magnólia Águas Claras,"Q. 106, Águas Claras DF, 71930-000, Brazil",-15.8358843,-48.0308945,0.53,Águas Claras,1,20,19
+Serra da Mantiqueira Residencial,"Lote Brasília, Q. 107 Rua E, 6, Brasília - DF, Brazil",-15.8276174,-48.0285781,1.36,Concessionárias,0,8,7
+Residencial Alameda das Palmeiras,"Col. Agrícola Vereda da Cruz - St. Hab. Arniqueira, Brasília - DF, 70297-400, Brazil",-15.8492865,-48.0242012,1.13,Águas Claras,1,19,3
+Residencial Parque das Acacias,"Q 107, Águas Claras DF, 71920-540, Brazil",-15.8306093,-48.0321292,0.86,Concessionárias,1,20,8
+Via Club Residence,"R. das Paineiras, 4, Águas Claras DF, 71918-000, Brazil",-15.8373674,-48.0322638,0.5,Águas Claras,1,20,20
+Condomínio Águas Cristalinas,"Q 4, Águas Claras DF, 71909-720, Brazil",-15.8367292,-48.0194546,0.26,Arniqueiras,2,20,14
+Residencial Giuseppe Verdi,"Q 202, Águas Claras DF, 71937-720, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+"Soffisticato Lofts & Living, 05","Q. 101, Águas Claras DF, 71906-750, Brazil",-15.8308401,-48.0109395,0.93,Arniqueiras,2,20,3
+Edificio Atenas,"Q. 101, Águas Claras DF, 71906-750, Brazil",-15.8308401,-48.0109395,0.93,Arniqueiras,2,20,3
+Figueiras Residence & Mall,"Q. 101 Loja 9, Águas Claras DF, 71906-750, Brazil",-15.8321959,-48.0100923,0.9,Arniqueiras,1,20,2
+Residencial Henrique Baeta,"Q. 101 - Águas Claras, Federal District, Brasília - Federal District, 71906-750, Brazil",-15.8308401,-48.0109395,0.93,Arniqueiras,2,20,3
+Residencial Easy - Portaria B,"R. das Pitangueiras, 6, Águas Claras DF, 71938-540, Brazil",-15.8356853,-48.01658949999999,0.13,Arniqueiras,6,20,10
+The Point Residence,"R. das Pitangueiras, lote 3, Águas Claras DF, 71908-720, Brazil",-15.8356149,-48.0170399,0.12,Arniqueiras,6,20,11
+Residencial Thomas Jefferson,"R. 9 Sul, 10, Águas Claras DF, 71938-360, Brazil",-15.8364807,-48.0150783,0.21,Arniqueiras,4,20,9
+Residencial Michigan,"R. 4 Norte, 2, Águas Claras DF, 71907-540, Brazil",-15.8342093,-48.010893,0.72,Arniqueiras,4,20,5
+Condomínio Residencial Bela Vista,"R. 5 Sul, 7, Águas Claras DF, 71938-180, Brazil",-15.8368649,-48.0121691,0.52,Arniqueiras,4,20,7
+Residencial Portal dos Lírios,"Q 102, Águas Claras DF, 71907-000, Brazil",-15.8322034,-48.01324899999999,0.65,Arniqueiras,5,20,7
+Condomínio Residencial Buriti,"R. Buriti, 5 - lote 5, Águas Claras DF, 70940-000, Brazil",-15.8394373,-48.0202568,0.46,Arniqueiras,1,20,11
+Condomínio Residencial DF Plaza,"R. Copaíba, 01, Águas Claras DF, 71919-540, Brazil",-15.8324168,-48.04069029999999,0.37,Concessionárias,6,17,3
+Residencial Chopin,"71919-540 - R. Copaíba, 2 - 71919-540, Águas Claras DF, 70297-400, Brazil",-15.8336556,-48.039105,0.17,Concessionárias,7,20,8
+Condomínio Residencial Rosely Gonçalves,"R. Copaíba, 10, Águas Claras DF, 71919-540, Brazil",-15.8352343,-48.0405202,0.2,Concessionárias,6,20,8
+Oceania Residence,"R. Copaíba, Águas Claras DF, 71919-540, Brazil",-15.8355016,-48.0412934,0.29,Concessionárias,5,20,6
+Edifício San Marino,"R. Copaíba, 4, Águas Claras DF, 71919-540, Brazil",-15.8339813,-48.0393016,0.15,Concessionárias,7,20,8
+Residencial Cincinatti,"R. 37 Norte, 4, Águas Claras DF, 71919-360, Brazil",-15.8342338,-48.03880789999999,0.1,Concessionárias,7,20,8
+Edifício Chopin,"R. Copaíba, 2, Águas Claras DF, 70297-400, Brazil",-15.8336556,-48.039105,0.17,Concessionárias,7,20,8
+Residencial San Lorenzo,"R. 37 Norte, 2, Águas Claras DF, 71919-360, Brazil",-15.8338374,-48.0379115,0.16,Concessionárias,7,20,9
+Dubai Design Residence,"R. 37 Norte, 5, Águas Claras DF, 71919-360, Brazil",-15.8329938,-48.0371168,0.29,Concessionárias,7,20,10
+DF Century Plaza,"R. Copaíba, 01, Águas Claras DF, 71919-900, Brazil",-15.8320645,-48.0411549,0.43,Estrada Parque,5,17,3
+Residencial Vive La Vie,"R. 37 Norte, Águas Claras DF, 71919-180, Brazil",-15.8329577,-48.0375642,0.27,Concessionárias,7,20,9
+Âncora Condomínios,"DF Plaza, Rua Copaiba, Lote 1, Torre A, Salas 913 a 920, Águas Claras DF, 71919-540, Brazil",-15.8324727,-48.04185500000001,0.35,Estrada Parque,5,20,3
+Privilege Residence,"R. 36 Norte, 9, Águas Claras DF, 71919-180, Brazil",-15.8345392,-48.0375054,0.14,Concessionárias,7,20,11
+Residencial Cosmopolitan,"R. 30 Norte, 1, Águas Claras DF, 71918-180, Brazil",-15.8371405,-48.0326976,0.56,Águas Claras,1,20,19
+Joy Residence,"R. 36 Sul, 19, Águas Claras DF, 71931-360, Brazil",-15.8375282,-48.039853,0.3,Concessionárias,1,20,10
+Residencial Machado de Assis,"R. 22 Sul, Lote 8, Águas Claras DF, 71925-720, Brazil",-15.8407672,-48.02647349999999,0.23,Águas Claras,1,20,16
+Infinity Residence,"R. 36 Sul, 10 - 12 - 10/12, Águas Claras DF, 70297-400, Brazil",-15.8362102,-48.0383777,0.12,Concessionárias,4,20,10
+Uno Residence,"R. 31 Norte, 4, Águas Claras DF, 71918-360, Brazil",-15.836378,-48.033485,0.57,Concessionárias,2,20,18
+Residencial Liverpool,"R. 37 Sul, 11, Águas Claras DF, 71931-540, Brazil",-15.8353451,-48.0398459,0.13,Concessionárias,6,20,8
+Residencial Eva Camilo,"R. 37 Sul, Águas Claras DF, 71931-540, Brazil",-15.8366893,-48.0406539,0.28,Concessionárias,2,20,7
+Residencial Rio Negro,"R. das Aroeiras, 2013, Águas Claras DF, 71919-180, Brazil",-15.8321555,-48.0343976,0.56,Concessionárias,3,20,12
+Residencial Glass Tower,"R. 37 Norte, 07, Águas Claras DF, 71919-360, Brazil",-15.8341649,-48.0389893,0.11,Concessionárias,7,20,8
+Residencial Acauã,"Q 206, Águas Claras DF, 71925-180, Brazil",-15.8434663,-48.0228349,0.71,Águas Claras,2,20,9
+Residencial Ilha de Sardenha,"Av. das Araucárias, esquina com Rua 37 Sul - ED. ILHA DE SARDENHA, Águas Claras DF, Brazil",-15.8362223,-48.03981760000001,0.17,Concessionárias,4,20,8
+Edifício Vintage Manacá,"Sul, lote 10, R. Manacá, Águas Claras DF, 71936-500, Brazil",-15.8372997,-48.0094281,0.82,Arniqueiras,2,20,3
+Residencial Donatello,"720 Rua 14 Sul 5, R. 14 Sul, Águas Claras DF, 71939-720, Brazil",-15.838587,-48.0197016,0.35,Arniqueiras,2,20,13
+The View Residencial,"Águas Claras, Federal District, Brasília - Federal District, 71928-720, Brazil",-15.838452,-48.0276695,0.2,Águas Claras,0,20,20
+Residential Lumini Play Life,"Lote 6 - R. 4 Norte, Águas Claras DF, 71907-540, Brazil",-15.8348862,-48.0109187,0.69,Arniqueiras,4,20,5
+Residencial Harpia,"R. 4 Norte, 4, Águas Claras DF, 71907-540, Brazil",-15.8344509,-48.01089870000001,0.71,Arniqueiras,4,20,5
+Condomínio Residencial Tropical,"Rua 8 Sul Lotes 10/12, Águas Claras DF, 71938-189, Brazil",-15.8366785,-48.0143078,0.29,Arniqueiras,4,20,8
+Apartamento,"R. Alecrim, 8 - apto 802, Águas Claras DF, Brazil",-15.8376395,-48.016938,0.1,Arniqueiras,5,20,9
+Condomínio do Edficio Residencial Antônio Carlos Pires D,"R. das Pitangueiras - Taguatinga, Brasília - DF, 71938-540, Brazil",-15.8354409,-48.0169592,0.14,Arniqueiras,6,20,11
+Condomínio Première,"R. Babaçú, 5, Águas Claras DF, 71928-000, Brazil",-15.8431626,-48.0293526,0.36,Águas Claras,0,20,13
+Art Life Design,"Rua Babaçú 3, Águas Claras DF, 71928-000, Águas Claras DF, 71928-900, Brazil",-15.8433321,-48.0286565,0.37,Águas Claras,0,20,12
+Residencial Monte Carlo,"R. 22 Sul, Lote 12, Águas Claras DF, 71925-720, Brazil",-15.8414314,-48.0264629,0.26,Águas Claras,1,20,16
+Condomínio Residencial Villa Borgio,"R. 21 Sul, 9, Águas Claras DF, 71925-540, Brazil",-15.841138,-48.0261531,0.28,Águas Claras,1,20,16
+Residencial Tuim,"Q 206, Águas Claras DF, 71925-180, Brazil",-15.8434663,-48.0228349,0.71,Águas Claras,2,20,9
+Residencial Madeira,"Q 206, Águas Claras DF, 71925-180, Brazil",-15.8434663,-48.0228349,0.71,Águas Claras,2,20,9
+Residencial Monalisa,"Q. 301, Águas Claras DF, 71901-120, Brazil",-15.8308404,-48.017387,0.66,Arniqueiras,3,20,8
+Residencial Mont Clair,"Q 207, Águas Claras DF, 71928-720, Brazil",-15.8442017,-48.0264299,0.51,Águas Claras,2,20,9
+Residencial Bem Te Vi,"Q. 105 Bem-te-vi, Águas Claras DF, 71917-000, Brazil",-15.835896,-48.0291508,0.47,Águas Claras,1,20,18
+Residencial Scorpius,"R. 25 Norte, 06, Águas Claras DF, 71917-180, Brazil",-15.8379735,-48.0297774,0.27,Águas Claras,1,20,19
+Residential My Life Style,"R. 25 Norte, 14, Águas Claras DF, 71917-180, Brazil",-15.8394742,-48.029774,0.15,Águas Claras,1,20,19
+Residencial Imperium,"Q 204 Residencia Imperium, Águas Claras DF, 71900-000, Brazil",-15.841732,-48.0192486,0.6,Arniqueiras,2,20,7
+Residencial José Maria Ribeiro - JMR,"R. 5 Sul, 5, Águas Claras DF, 71937-180, Brazil",-15.8362863,-48.0122545,0.52,Arniqueiras,4,20,7
+Residencial Imprensa I - Bloco C e D,"Q 201 Imprensa I Bloco C, Águas Claras DF, 72010-070, Brazil",-15.8385365,-48.0109581,0.68,Arniqueiras,1,20,6
+Residencial Jardim dos Ipês,"Res. Jardim dos Ipês - R. Ipê Amarelo, Lote 06, Águas Claras DF, 71937-360, Brazil",-15.83616,-48.0125141,0.49,Arniqueiras,4,20,7
+Residencial Colina,"Q. 104, Águas Claras DF, 70297-400, Brazil",-15.8340951,-48.0189492,0.36,Arniqueiras,5,20,14
+Ed. Uptown Residence,"R. 18 Norte, 5, Águas Claras DF, 71910-720, Brazil",-15.8385875,-48.0233618,0.57,Águas Claras,2,20,16
+Edifício Carnaúbas,"Q. 301 Lote 02, Águas Claras DF, 71904-540, Brazil",-15.8301588,-48.017238,0.73,Arniqueiras,1,20,8
+Residencial Matheus Muniz,"R. 28 Norte, 5, Águas Claras DF, 71917-720, Brazil",-15.8377014,-48.0314971,0.42,Águas Claras,1,20,19
+Reserva Parque Clube,"R. das Carnaúbas, 12, Águas Claras DF, 70297-400, Brazil",-15.8288606,-48.0171025,0.88,Arniqueiras,1,20,6
+Residencial Olimpia,"Q 204, Águas Claras DF, Brazil",-15.8410372,-48.0188652,0.52,Arniqueiras,1,20,8
+Residencial Cooperbrapa II,"R. 20 Sul, 10, Águas Claras DF, 71925-360, Brazil",-15.8410012,-48.02445119999999,0.44,Águas Claras,1,20,15
+Edifício Real Celebration Life Club,"R. 37 Sul, 17 - e 19, Águas Claras DF, 71931-540, Brazil",-15.8357905,-48.0406296,0.22,Concessionárias,6,20,7
+Edifício Rivoli,"R. 37 Sul, 16, Águas Claras DF, 71931-540, Brazil",-15.837215,-48.0408471,0.33,Concessionárias,2,20,8
+Moove Residence,"Moove Residence - R. 36 Norte, Águas Claras DF, 71919-180, Brazil",-15.8342541,-48.0372516,0.18,Concessionárias,7,20,11
+Residencial Laguna Beach,"R. 36 Norte, 3350, Águas Claras DF, 72025-065, Brazil",-15.8344766,-48.0354085,0.35,Concessionárias,4,20,14
+Edificio Solarium Del Fiori,"Boulevard Sul, R. 35 Sul, 09, Águas Claras DF, 71931-180, Brazil",-15.8369313,-48.0370109,0.27,Concessionárias,3,20,11
+Residencial Deborah Cristina,"R. 30 Sul, 6, Águas Claras DF, 71929-360, Brazil",-15.8392126,-48.0346451,0.62,Concessionárias,1,20,17
+Condomínio Edifício Vitoria Régia,"R. 33 Norte, s/n, Águas Claras DF, 71918-540, Brazil",-15.8364742,-48.0357811,0.34,Concessionárias,3,20,12
+Life Residence,"R. 31 Norte, 3, Águas Claras DF, 71918-360, Brazil",-15.8362205,-48.0338056,0.53,Concessionárias,2,20,18
+Condomínio Residencial Harmonie,"R. 31 Norte, Lote 01, Águas Claras DF, 71918-360, Brazil",-15.8356685,-48.0332351,0.58,Concessionárias,2,20,18
+Edifício Tocantins,"R. 28 Sul, 9, Águas Claras DF, 71929-000, Brazil",-15.8409171,-48.034454,0.65,Águas Claras,1,20,18
+Residencial L´Essence du Parc,"R. 30 Norte, Águas Claras DF, 71928-720, Brazil",-15.8367103,-48.0329059,0.6,Águas Claras,1,20,18
+Residencial Manhattan,"R. 21 Sul, 11, Águas Claras DF, 71925-540, Brazil",-15.8414258,-48.0261539,0.29,Águas Claras,1,20,16
+Edifício Almirante Frontin,"R. 25 Norte, 12, Águas Claras DF, 71917-180, Brazil",-15.8389788,-48.0296146,0.17,Águas Claras,1,20,19
+Residencial Marcílio Dias,"Q 208, Águas Claras DF, 71926-500, Brazil",-15.8456602,-48.0284723,0.62,Águas Claras,1,20,8
+Edifício Mirante São Francisco,"R. 24 Sul, Águas Claras DF, 71927-000, Brazil",-15.8429562,-48.028841,0.33,Águas Claras,0,20,12
+Residencial Olavo Bilac,"R. 21 Sul, 7 - Lt 07, Águas Claras DF, 71925-540, Brazil",-15.8407738,-48.0260072,0.28,Águas Claras,1,20,16
+Condomínio Horizonte Parque,"R. 22 Norte, 2, Águas Claras DF, 71916-250, Brazil",-15.838661,-48.0266773,0.25,Águas Claras,0,20,18
+Residencial Paladium,"R. 21 Norte, 6, Águas Claras DF, 71916-000, Brazil",-15.8393167,-48.02566909999999,0.31,Águas Claras,1,20,16
+Condomínio do Edifício Villa Grandino,"R. 21 Norte, 3 - Centro, Brasília - DF, 71916-000, Brazil",-15.839046,-48.026128,0.27,Águas Claras,0,20,17
+Condomínio Porto das Águas,"R. 20 Sul, 8, Águas Claras DF, 71925-360, Brazil",-15.8406288,-48.0245285,0.43,Águas Claras,1,20,16
+Residencial Ilha de Sicília,"R. 18 Sul, 8, Águas Claras DF, 71940-540, Brazil",-15.8402297,-48.0219935,0.66,Arniqueiras,2,20,14
+Residencial Ilha Bela,"R. 18 Sul, 13, Águas Claras DF, 71940-540, Brazil",-15.840311,-48.0225652,0.63,Águas Claras,2,20,15
+Residencial Politec,"R. 16 Sul, 6, Águas Claras DF, 71940-180, Brazil",-15.8395781,-48.0205841,0.49,Arniqueiras,2,20,12
+Residencial Vilarindo Lima,"R. 12 Sul, lotes 12 a 14, Águas Claras DF, 71939-000, Brazil",-15.8381431,-48.017976,0.18,Arniqueiras,2,20,10
+Condomínio do Edifício Cooperbrapa I,"R. 19 Sul, 9, Águas Claras DF, 71940-720, Brazil",-15.8405138,-48.0233168,0.55,Águas Claras,2,20,14
+Residencial Porto Do Sol,"R. 8 Sul, 11, Águas Claras DF, 71938-180, Brazil",-15.8370754,-48.0145481,0.27,Arniqueiras,4,20,8
+Residencial First,"Q 201 Sul, Águas Claras DF, 71937-540, Brazil",-15.8383678,-48.0115778,0.61,Arniqueiras,1,20,6
+Residencial Comercial,"R. 21 Norte, 1, Águas Claras DF, 71916-000, Brazil",-15.8386533,-48.0261782,0.29,Águas Claras,0,20,17
+Edificio CENTRALE,"Ed. Centrale - R. 18 Sul, 15, Águas Claras DF, 71940-540, Brazil",-15.8404267,-48.0222446,0.67,Águas Claras,2,20,14
+Condomínio Ouro Branco II,"Quadra 206 Lote 06 Praça Tuim, Águas Claras DF, 71925-180, Brazil",-15.8428233,-48.0237967,0.59,Águas Claras,2,20,13
+Pulse Residence,"R. 19 Norte, 03, Águas Claras DF, 71915-000, Brazil",-15.8386931,-48.0246364,0.44,Águas Claras,1,20,15
+Edifício Lorys,"R. 19 Norte, Águas Claras DF, 71915-000, Brazil",-15.8390876,-48.0241424,0.47,Águas Claras,1,20,16
+Absoluto Residencial,"R. 19 Norte, Águas Claras DF, 71900-100, Brazil",-15.8390876,-48.0241424,0.47,Águas Claras,1,20,16
+Condomínio Paço Línea Residence & Mall,"Q 205, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Sagitarius Residencial Resort,"Q 206 Quadra 206, Lote 9, Águas Claras DF, 70297-400, Brazil",-15.8436445,-48.0244404,0.59,Águas Claras,2,20,10
+Residencial Aquarius,"Q 205, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Residencial Edifício Ingrid,"Q 205, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Residencial Real Classic Resort,"Q 206, Águas Claras DF, 71925-180, Brazil",-15.8434663,-48.0228349,0.71,Águas Claras,2,20,9
+Residencial Rouxinol,"Q 205 Bloco B, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Residencial Ilha de Manhattan,"Ilha De Manhattan - R. 13 Norte, 4, Águas Claras DF, 71909-720, Brazil",-15.8367667,-48.0192754,0.24,Arniqueiras,2,20,14
+Residencial Jandaia,"Q 205 - Águas Claras, Federal District, Brasília - Federal District, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Residencial Bella Cintra,"R. 16 Sul, 4 - Residencial Bella Cintra, Brasília - DF, 71940-180, Brazil",-15.8393618,-48.02115209999999,0.53,Arniqueiras,2,20,15
+Condomínio do Supremo Residencial Clube e Supremo Mall,"R. 14 Norte, 1, Águas Claras DF, 71910-000, Brazil",-15.8367953,-48.0206353,0.38,Arniqueiras,2,20,14
+Condomínio Residencial Paulo Freire,"Q 204, Águas Claras DF, 71939-540, Brazil",-15.8412835,-48.0185082,0.53,Arniqueiras,1,20,8
+Residencial Fênix,"Q 204, Águas Claras DF, Brazil",-15.8410372,-48.0188652,0.52,Arniqueiras,1,20,8
+Edifício Alfa Mix Center,"Q. 204 Ed. Alfa Mix Center, Águas Claras DF, 70297-400, Brazil",-15.8400599,-48.0185153,0.4,Arniqueiras,1,20,8
+Residencial Portinari,"Q 204, Águas Claras DF, 71925-000, Brazil",-15.8410372,-48.0188652,0.52,Arniqueiras,1,20,8
+Residencial Oscar Freire,"r 140, R. 4 Sul, 9, Águas Claras DF, 71937-000, Brazil",-15.8362528,-48.0113333,0.61,Arniqueiras,4,20,7
+Residencial Easy - Portaria A,"Res. EASY - R. 9 Norte, Lote 5 - Bloco A, Águas Claras DF, 71908-540, Brazil",-15.8353431,-48.0159355,0.2,Arniqueiras,5,20,10
+Edifício Costa do Sol Elegant Suítes,"R. 5 Sul, 8, Águas Claras DF, 71937-180, Brazil",-15.8368415,-48.0118466,0.56,Arniqueiras,4,20,7
+Residencial Johann Strauss,"720, Q. 202, Águas Claras DF, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+Residencial Elegance,"R. 4 Sul, 11, Águas Claras DF, 71937-000, Brazil",-15.836846,-48.0114267,0.6,Arniqueiras,4,20,7
+Residencial Cedro,"R. 4 Norte, 5, Águas Claras DF, 71900-100, Brazil",-15.834328,-48.0114283,0.66,Arniqueiras,4,20,5
+Residencial Portal dos Girassóis,"Q. 106, Águas Claras DF, 71915-500, Brazil",-15.8358598,-48.0312496,0.55,Águas Claras,1,20,19
+Residencial Saint Tropez,"Av. das Castanheiras, 3350, Águas Claras DF, 71928-720, Brazil",-15.8351644,-48.0351007,0.38,Concessionárias,3,20,14
+Residencial Grand Home,"Res. Grand Home - R. 28 Norte, 1, Águas Claras DF, 71917-720, Brazil",-15.8371677,-48.0313409,0.44,Águas Claras,1,20,20
+Condo Maison Viviane Rinaldi,"Asa Sul Ed. Maison Viviane Rinaldi Loja 3 - Asa Sul, Brasília - DF, 71917-180, Brazil",-15.837307,-48.0295473,0.33,Águas Claras,1,20,18
+Residencial citta,"Águas Claras, Federal District, Brasília - Federal District, 71929-540, Brazil",-15.8416232,-48.0360127,0.77,Concessionárias,0,20,14
+La Belle Maison personnalisée,"R. 24 Norte, 09/11, Águas Claras DF, 71916-750, Brazil",-15.8386014,-48.02910079999999,0.17,Águas Claras,1,20,20
+Edifício Ilha da Madeira,"129, R. 12 Norte, 59, Brasília - DF, Brazil",-15.8366694,-48.01840379999999,0.14,Arniqueiras,2,20,14
+Residencial Fernando de Noronha,"Q. 101 LOTE 25, Águas Claras DF, 71906-500, Brazil",-15.8318163,-48.00967989999999,0.96,Arniqueiras,2,20,2
+Residencial Flor do Cerrado,"R. 3 Norte, Águas Claras DF, 71907-360, Brazil",-15.8343773,-48.0100056,0.8,Arniqueiras,4,20,3
+Condomínio Edifício Morada Nova,"Rua 3 Norte Lote 01 - s/n rt A - Taguatinga, DF, Brazil",-15.8342495,-48.0103567,0.77,Arniqueiras,4,20,5
+Residencial Spazio Bella Vita,"Q. 101 Spazio Bella Vita Quadra 101, Águas Claras DF, 71907-180, Brazil",-15.8315249,-48.0098535,0.96,Arniqueiras,2,20,2
+Condomínio Praça Tiê Mirante Residence,"Q. 101, Águas Claras DF, 71907-180, Brazil",-15.8324938,-48.0111752,0.79,Arniqueiras,4,20,5
+Residencial Tiê Clube,"08, Quadra 101 - Aguas Claras norte, Brasília - DF, Brazil",-15.8321813,-48.0098332,0.92,Arniqueiras,1,20,2
+Residencial atenas Águas claras,"Q. 301, Águas Claras DF, 71592-000, Brazil",-15.8310145,-48.0150464,0.67,Arniqueiras,3,20,8
+Residencial Matisse Antares,"Q 102 Praça Perdiz, Águas Claras DF, Brazil",-15.8325506,-48.0134693,0.6,Arniqueiras,5,20,7
+Residencial Paradiso,"Q. 104, Águas Claras DF, 71909-180, Brazil",-15.834496,-48.0195169,0.36,Arniqueiras,3,20,14
+Residencial Imprensa I,"Q 201 conjunto 6 bloco B, Águas Claras DF, 72010-070, Brazil",-15.8383652,-48.0111725,0.65,Arniqueiras,1,20,6
+Residencial Flora Brasilis,"Lote 08, Q. 104, Águas Claras DF, Brazil",-15.8342603,-48.0200353,0.42,Arniqueiras,3,20,13
+Residencial Real Brasil,"Q. 104 Res. Real Brasil, Águas Claras DF, 71909-180, Brazil",-15.8349859,-48.01922219999999,0.3,Arniqueiras,3,20,13
+Avant Practical Residence,"Q. 104, Águas Claras DF, 71909-180, Brazil",-15.834496,-48.0195169,0.36,Arniqueiras,3,20,14
+Real Bothanic Residencial,"Q. 104, Águas Claras DF, 70297-400, Brazil",-15.8340951,-48.0189492,0.36,Arniqueiras,5,20,14
+Nature Residence,"Praça Bem-Te-Vi, Q. 105, Águas Claras DF, 71928-720, Brazil",-15.8359375,-48.028785,0.46,Águas Claras,1,20,18
+Edifício Maison Champagnat,"Q. 105, Águas Claras DF, 71928-720, Brazil",-15.8358985,-48.0287947,0.46,Águas Claras,1,20,18
+Edifício Gran Riserva,"Q. 106, Águas Claras DF, 71915-500, Brazil",-15.8358598,-48.0312496,0.55,Águas Claras,1,20,19
+Edifício Mirante do Parque - Águas Claras Norte,"QD 105 Praça Bem Te Vi lote 01 - Águas Claras Norte, Brasília - DF, 71915-250, Brazil",-15.835896,-48.0291508,0.47,Águas Claras,1,20,18
+Mirante Club Residence,"Quadra 106, Lote 4, Águas Claras DF, 71915-500, Brazil",-15.8355387,-48.0309639,0.57,Águas Claras,1,20,20
+Vinícius Condomínio Resort,"Q. 107 Rua E, Águas Claras DF, 71920-180, Brazil",-15.8278563,-48.0291721,1.3,Concessionárias,0,8,6
+Residencial Mont Serrat,"Q. 107 Rua A, 4, Águas Claras DF, 71920-710, Brazil",-15.8301334,-48.0329329,0.83,Concessionárias,1,20,6
+Condomínio Ouro Verde,"Q. 107 Rua E, 5, Águas Claras DF, 71920-180, Brazil",-15.8271973,-48.0291744,1.34,Concessionárias,1,7,5
+Residencial Fontana di Maria Aid,"Q 201 - Águas Claras, Federal District, Brasília - Federal District, 71937-540, Brazil",-15.8383678,-48.0115778,0.61,Arniqueiras,1,20,6
+Sinfonia Prime Residence,"Q 202, Águas Claras DF, 71937-720, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+Residencial Wolfgang Amadeus Mozart,"Q 202, Águas Claras DF, 71937-720, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+Residencial Claude Debussy & Franz Schubert,"Q 202 bloco B 304, Q. 202, 10 - bloco B 801, Águas Claras DF, 71937-720, Brazil",-15.8385205,-48.015107,0.29,Arniqueiras,3,20,7
+Residencial Ludwig Van Beethoven,"Q 202, Águas Claras DF, 71937-720, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+Residencial ipê amarelo,"R. Ipê Amarelo, 08, Águas Claras DF, 71937-360, Brazil",-15.8369483,-48.0124584,0.49,Arniqueiras,4,20,7
+Edifício Heitor Villa Lobos,"Q 202, Águas Claras DF, 71937-720, Brazil",-15.8390577,-48.0137638,0.44,Arniqueiras,1,20,7
+Residencial Imprensa 1 Bloco A,"Q 201 Blocos A/B, Águas Claras DF, 71937-540, Brazil",-15.8297622,-48.0112168,1.0,Arniqueiras,2,20,2
+Residencial Imprensa II,"Q 210, Águas Claras DF, 71931-000, Brazil",-15.8397942,-48.0403573,0.55,Concessionárias,1,20,9
+Residencial Luiza II,"Q. 301 - Águas Claras, Federal District, Brasília - Federal District, 71901-010, Brazil",-15.8302642,-48.0162128,0.73,Arniqueiras,3,20,8
+Residencial Sollarium,"Brasília, Q. 205, 10, Águas Claras DF, 71925-000, Brazil",-15.8419382,-48.0204903,0.69,Arniqueiras,2,20,7
+Green Towers Condomínio Resort,"Q 205, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Residencial Sabiá,"Q 205, Águas Claras DF, 71925-000, Brazil",-15.8420903,-48.021286,0.75,Arniqueiras,2,20,9
+Edificio Tower Club Residence,"Q 206, Águas Claras DF, 71925-180, Brazil",-15.8434663,-48.0228349,0.71,Águas Claras,2,20,9
+Edifício Bercy Village,"Q 206, Águas Claras DF, 71925-000, Brazil",-15.8429508,-48.0235873,0.61,Águas Claras,2,20,14
+Edifício Costa Azul Águas Claras,"Q 208 Praça Sabiá, Águas Claras DF, 71926-500, Brazil",-15.8448948,-48.0279356,0.54,Águas Claras,1,20,12
+Edificio Almirante Soares Dutra,"Q 208 03:, Águas Claras DF, 71926-500, Brazil",-15.8452537,-48.027024,0.6,Águas Claras,2,20,10
