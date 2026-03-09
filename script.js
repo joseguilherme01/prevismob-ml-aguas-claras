@@ -1,8 +1,8 @@
 /**
- * PrevIsmob - Script Frontend para Previsão de Preços de Imóveis v2.0
+ * PrevIsmob - Script Frontend para Previsão de Preços de Imóveis v2.1
  * ================================================================
- * Integração com dataset CSV via endpoint GET /condominio
- * Enriquecimento automático de dados georreferenciados
+ * Campo de condomínio usa Google Places Autocomplete (sem dataset local)
+ * Enriquecimento automático de dados georreferenciados via backend
  */
 
 // =====================================================================
@@ -10,7 +10,6 @@
 // =====================================================================
 
 const API_BASE = "http://localhost:8000";
-const API_CONDOMINIO = `${API_BASE}/condominio`; // GET lista de prédios
 const API_PREVER = `${API_BASE}/prever`; // POST para previsão
 
 // Seletores de elementos do DOM
@@ -54,17 +53,30 @@ function formatarReal(valor) {
 /**
  * Exibe mensagem de erro com animação
  * @param {string} mensagem
+ * @param {boolean} [isCritico=false] - Erros críticos ficam visíveis por mais tempo
  */
-function exibirErro(mensagem) {
+function exibirErro(mensagem, isCritico = false) {
   const elementoErro = document.getElementById(seletores.mensagemErro);
   const textoErro = document.getElementById(seletores.textoErro);
 
   textoErro.textContent = mensagem;
   elementoErro.classList.add("visivel");
 
-  setTimeout(() => {
-    elementoErro.classList.remove("visivel");
-  }, 5000);
+  if (isCritico) {
+    elementoErro.classList.add("critico");
+  } else {
+    elementoErro.classList.remove("critico");
+  }
+
+  // Cancela qualquer auto-hide anterior antes de agendar o novo
+  if (exibirErro._timeout) {
+    clearTimeout(exibirErro._timeout);
+  }
+
+  const duracao = isCritico ? 12000 : 5000;
+  exibirErro._timeout = setTimeout(() => {
+    elementoErro.classList.remove("visivel", "critico");
+  }, duracao);
 
   console.error(`❌ ${mensagem}`);
 }
@@ -166,6 +178,9 @@ function exibirResultado(precoMin, precoSug, precoMax, areaUtil, localData) {
   const totalMax = precoMax * areaUtil;
 
   // Atualizar badges de localização
+  // mostrar nome da estação junto com a distância
+  document.getElementById("metro_nome").textContent =
+    localData.metro_nome || "--";
   document.getElementById(seletores.locDistancia).textContent = Number(
     localData.Distancia_Metro_km,
   ).toFixed(2);
@@ -184,15 +199,17 @@ function exibirResultado(precoMin, precoSug, precoMax, areaUtil, localData) {
   document.getElementById(seletores.valorTotalMax).textContent =
     formatarReal(totalMax);
 
-  // Carregar mapa se coordenadas estiverem disponíveis
+  // Carregar mapa se coordenadas estiverem disponíveis (OpenStreetMap, sem API key)
   try {
     const mapa = document.getElementById("mapa_iframe");
     const lat = Number(localData.Latitude);
     const lon = Number(localData.Longitude);
-    if (!isNaN(lat) && !isNaN(lon)) {
-      mapa.src = `https://maps.google.com/maps?q=${lat},${lon}&z=16&output=embed`;
+    if (!isNaN(lat) && !isNaN(lon) && lat !== 0 && lon !== 0) {
+      const delta = 0.008;
+      mapa.src = `https://www.openstreetmap.org/export/embed.html?bbox=${lon - delta},${lat - delta},${lon + delta},${lat + delta}&layer=mapnik&marker=${lat},${lon}`;
     } else {
       mapa.src = "";
+      console.warn("Coordenadas inválidas ou ausentes — mapa não carregado.");
     }
   } catch (err) {
     console.warn("Não foi possível carregar o mapa:", err);
@@ -208,46 +225,6 @@ function exibirResultado(precoMin, precoSug, precoMax, areaUtil, localData) {
 }
 
 // =====================================================================
-// CARREGAMENTO INICIAL: POPULATE DROPDOWN DE CONDOMÍNIOS
-// =====================================================================
-
-/**
- * Busca lista de condomínios e popula o dropdown
- * Executada no DOMContentLoaded
- */
-async function carregarCondominio() {
-  try {
-    console.log("📥 Carregando lista de condomínios...");
-
-    const resposta = await fetch(API_CONDOMINIO);
-
-    if (!resposta.ok) {
-      throw new Error(`Erro HTTP: ${resposta.status}`);
-    }
-
-    const condominios = await resposta.json(); // Array de strings (nomes)
-    console.log(`✓ ${condominios.length} condomínios carregados`);
-
-    // Preencher datalist (autocomplete)
-    const datalist = document.getElementById("lista_condominios");
-    datalist.innerHTML = ""; // limpar opções anteriores
-
-    condominios.forEach((nome) => {
-      const opcao = document.createElement("option");
-      opcao.value = nome;
-      datalist.appendChild(opcao);
-    });
-
-    console.log("✓ Datalist preenchido com sucesso");
-  } catch (erro) {
-    console.error("✗ Erro ao carregar condomínios:", erro);
-    exibirErro(
-      "Erro ao carregar lista de condomínios. Verifique se o servidor está rodando.",
-    );
-  }
-}
-
-// =====================================================================
 // FUNÇÃO PRINCIPAL: CALCULAR VALOR
 // =====================================================================
 
@@ -259,6 +236,12 @@ async function carregarCondominio() {
  * 4. Exibe resultado
  */
 async function calcularValor() {
+  // Declarar fora do try para que estejam acessíveis no finally
+  const btnCalcular = document.getElementById(seletores.btnCalcular);
+  const textoBotaoOriginal = btnCalcular
+    ? btnCalcular.textContent
+    : "Calcular valor de mercado";
+
   try {
     // ========== VALIDAÇÃO ==========
     if (!validarCampos()) {
@@ -268,10 +251,10 @@ async function calcularValor() {
     ocultarErro();
 
     // ========== DESABILITAR BOTÃO ==========
-    const btnCalcular = document.getElementById(seletores.btnCalcular);
-    const textoBotaoOriginal = btnCalcular.textContent;
-    btnCalcular.disabled = true;
-    btnCalcular.textContent = "Calculando...";
+    if (btnCalcular) {
+      btnCalcular.disabled = true;
+      btnCalcular.textContent = "Calculando...";
+    }
 
     // ========== COLETAR DADOS ==========
     console.log("📊 Coletando dados do formulário...");
@@ -313,6 +296,7 @@ async function calcularValor() {
 
     const localData = {
       Distancia_Metro_km: resultado.Distancia_Metro_km,
+      metro_nome: resultado.metro_nome,
       Mercados_500m: resultado.Mercados_500m,
       Escolas_1000m: resultado.Escolas_1000m,
       Parques_800m: resultado.Parques_800m,
@@ -327,10 +311,12 @@ async function calcularValor() {
     // ========== TRATAMENTO DE ERROS ==========
 
     let mensagemErro = "Erro desconhecido. Tente novamente.";
+    let isCritico = false;
 
     if (erro instanceof TypeError) {
       mensagemErro =
         "❌ Não consigo conectar com o servidor. Verifique se a API está rodando em http://localhost:8000";
+      isCritico = true;
     } else if (erro.message.includes("HTTP")) {
       mensagemErro = `❌ Erro do servidor: ${erro.message}`;
     } else if (erro.message.includes("Prédio")) {
@@ -339,12 +325,13 @@ async function calcularValor() {
       mensagemErro = `❌ ${erro.message}`;
     }
 
-    exibirErro(mensagemErro);
+    exibirErro(mensagemErro, isCritico);
   } finally {
     // ========== RESTAURAR BOTÃO ==========
-    const btnCalcular = document.getElementById(seletores.btnCalcular);
-    btnCalcular.disabled = false;
-    btnCalcular.textContent = textoBotaoOriginal;
+    if (btnCalcular) {
+      btnCalcular.disabled = false;
+      btnCalcular.textContent = textoBotaoOriginal;
+    }
   }
 }
 
@@ -356,8 +343,35 @@ document.addEventListener("DOMContentLoaded", async function () {
   console.log("✓ PrevIsmob Frontend v2.0 - Carregado");
   console.log(`📍 API: ${API_BASE}`);
 
-  // ========== CARREGAR LISTA DE CONDOMÍNIOS ==========
-  await carregarCondominio();
+  // landing page: iniciar app quando usuário clicar
+  // função reutilizável para iniciar a aplicação a partir da landing
+  function iniciarApp() {
+    document.getElementById("landing-section").style.display = "none";
+    const app = document.getElementById("app-section");
+    app.style.display = "block";
+    app.classList.add("fade-in");
+  }
+
+  // vincular tanto o botão antigo (se existir) quanto o botão dentro do card
+  const btnComecar = document.getElementById("btn-comecar");
+  if (btnComecar) {
+    btnComecar.addEventListener("click", iniciarApp);
+  }
+  const btnCard = document.querySelector(".card-button");
+  if (btnCard) {
+    btnCard.addEventListener("click", iniciarApp);
+  }
+  // botão voltar na app-section
+  const btnVoltar = document.getElementById("btn-voltar");
+  if (btnVoltar) {
+    btnVoltar.addEventListener("click", () => {
+      const app = document.getElementById("app-section");
+      app.style.display = "none";
+      const landing = document.getElementById("landing-section");
+      landing.style.display = "block";
+      landing.classList.add("fade-in");
+    });
+  }
 
   // ========== FORMULÁRIO ==========
   const formulario = document.getElementById(seletores.formulario);

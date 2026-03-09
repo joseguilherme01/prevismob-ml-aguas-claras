@@ -11,6 +11,12 @@ import joblib
 import pandas as pd
 import os
 from typing import List
+import time
+
+# novas dependências para Google Maps e dotenv
+import googlemaps
+from dotenv import load_dotenv
+from geopy.distance import geodesic
 
 # ============================================================================
 # INICIALIZAÇÃO DA APLICAÇÃO
@@ -34,27 +40,14 @@ app.add_middleware(
     allow_headers=["*"],
 ) # <-- O parêntese do middleware fecha aqui!
 
-# A classe começa em uma linha nova, sem espaços no começo da linha:
-class RespostaPrevicao(BaseModel):
-    preco_m2_minimo: float = Field(..., description="Preço mínimo por m²")
-    preco_m2_sugerido: float = Field(..., description="Preço sugerido por m²")
-    preco_m2_maximo: float = Field(..., description="Preço máximo por m²")
-    Distancia_Metro_km: float = Field(..., description="Distância até o metrô (km)")
-    Mercados_500m: float = Field(..., description="Número de mercados em 500m")
-    Escolas_1000m: float = Field(..., description="Número de escolas em 1000m")
-    Parques_800m: float = Field(..., description="Número de parques em 800m")
-    Latitude: float = Field(..., description="Latitude do prédio")
-    Longitude: float = Field(..., description="Longitude do prédio")
-    status: str = Field(default="sucesso", description="Status da previsão")
-
 # ============================================================================
 # CARREGAMENTO DO DATASET CSV
 # ============================================================================
 
-# Caminho para o arquivo CSV
+# Caminho para o arquivo CSV (ainda usado por /condominio)
 CSV_PATH = os.path.join(os.path.dirname(__file__), "data", "dataset_aguas_claras_completo.csv")
 
-# DataFrame global que armazena todos os dados
+# DataFrame global que armazena todos os dados (pode ser None se não houver)
 df_condominios = None
 
 try:
@@ -118,12 +111,22 @@ class RespostaPrevicao(BaseModel):
     preco_m2_sugerido: float = Field(..., description="Preço sugerido por m²")
     preco_m2_maximo: float = Field(..., description="Preço máximo por m²")
     Distancia_Metro_km: float = Field(..., description="Distância até o metrô (km)")
+    metro_nome: str = Field(..., description="Nome da estação de metrô mais próxima")
     Mercados_500m: float = Field(..., description="Número de mercados em 500m")
     Escolas_1000m: float = Field(..., description="Número de escolas em 1000m")
     Parques_800m: float = Field(..., description="Número de parques em 800m")
     Latitude: float = Field(..., description="Latitude do prédio")
     Longitude: float = Field(..., description="Longitude do prédio")
     status: str = Field(default="sucesso", description="Status da previsão")
+
+# carregar variáveis de ambiente e inicializar cliente Google Maps
+load_dotenv()
+GOOGLE_MAPS_KEY = os.getenv("Maps_API_KEY")
+if not GOOGLE_MAPS_KEY:
+    print("⚠️ Maps_API_KEY não encontrada em .env. Algumas rotas podem falhar.")
+
+# inicializa cliente gmaps (pode ser None se chave faltante)
+gmaps = googlemaps.Client(key=GOOGLE_MAPS_KEY) if GOOGLE_MAPS_KEY else None
 
 # ============================================================================
 # ROTAS / ENDPOINTS
@@ -156,8 +159,8 @@ async def obter_condominio():
         )
     
     try:
-        # Obter lista única de nomes, ordenar alfabeticamente
-        nomes_unicos = sorted(df_condominios["Nome_Predio"].unique().tolist())
+        # Obter lista única de nomes: remover nulos, extrair únicos, ordenar e converter para list
+        nomes_unicos = sorted(df_condominios["Nome_Predio"].dropna().unique().tolist())
         return nomes_unicos
     except Exception as e:
         print(f"✗ Erro ao obter lista de condomínios: {e}")
@@ -172,9 +175,11 @@ async def prever_preco(dados: DadosImovelUsuario):
     """
     Endpoint para previsão de preço do imóvel.
     
-    Recebe dados básicos do usuário e Nome_Predio, procura no dataset
-    para extrair as distâncias (proximidades), calcula Condominio_m2,
-    monta o DataFrame com as 7 variáveis esperadas e faz a previsão.
+    Recebe dados básicos do usuário e Nome_Predio. A partir do endereço
+    faz geocoding usando Google Maps para obter coordenadas e métricas de
+    proximidade dinamicamente (metrô, parques, escolas, mercados). Não
+    depende mais de um dataset local. Calcula Condominio_m2, monta o DataFrame
+    com as 7 variáveis esperadas e faz a previsão.
     
     Args:
         dados (DadosImovelUsuario): Dados do usuário (5 campos)
@@ -191,41 +196,111 @@ async def prever_preco(dados: DadosImovelUsuario):
             detail="Modelo ML não foi carregado"
         )
     
-    if df_condominios is None:
-        raise HTTPException(
-            status_code=500,
-            detail="Dataset não foi carregado"
-        )
+    # o dataset não é necessário nesta rota; só usamos Google Maps para localizar o imóvel
     
     try:
-        # ========== PASSO 1: BUSCAR PRÉDIO NO DATASET ==========
-        
-        # Procurar a linha correspondente ao Nome_Predio
-        predio_encontrado = df_condominios[
-            df_condominios["Nome_Predio"] == dados.Nome_Predio
-        ]
-        
-        if predio_encontrado.empty:
+        # ========== PASSO 1: OBTER COORDENADAS E PROXIMIDADES VIA GOOGLE MAPS ==========
+        if not gmaps:
+            raise HTTPException(
+                status_code=500,
+                detail="Google Maps client não foi inicializado. Verifique a chave em .env"
+            )
+
+        endereco_completo = f"{dados.Nome_Predio}, Águas Claras, Distrito Federal, Brasil"
+        try:
+            geocode_res = gmaps.geocode(endereco_completo)
+        except Exception as e:
+            print(f"✗ Erro na requisição de geocode: {e}")
+            raise HTTPException(status_code=500, detail="Erro ao consultar Google Maps")
+
+        if not geocode_res:
             raise HTTPException(
                 status_code=404,
-                detail=f"Prédio '{dados.Nome_Predio}' não encontrado no dataset"
+                detail=f"Endereço '{dados.Nome_Predio}' não encontrado pelo Google Maps"
             )
-        
-        # Pegar primeira linha (caso haja duplicatas)
-        predio_row = predio_encontrado.iloc[0]
+
+        location = geocode_res[0]["geometry"]["location"]
+        latitude = location["lat"]
+        longitude = location["lng"]
+        print(f"✓ Coordenadas obtidas via Google Maps: Lat {latitude}, Lon {longitude}")
+
+        # inicializa valores padrão
+        distancia_metro_km = 0.0
+        mercados_500m = 0.0
+        escolas_1000m = 0.0
+        parques_800m = 0.0
+
+        # buscar estações de metrô próximas e extrair nome
+        metro_nome = "Nenhuma estação próxima"
+        try:
+            metro_resp = gmaps.places_nearby(location=(latitude, longitude), radius=1500, type="subway_station")
+            metros = metro_resp.get("results", [])
+            if metros:
+                # encontrar a estação mais próxima calculando distância para cada
+                menor = None
+                for m in metros:
+                    lat_m = m["geometry"]["location"]["lat"]
+                    lng_m = m["geometry"]["location"]["lng"]
+                    dist = geodesic((latitude, longitude), (lat_m, lng_m)).km
+                    if menor is None or dist < menor[0]:
+                        menor = (dist, m)
+                if menor:
+                    distancia_metro_km = menor[0]
+                    metro_nome = menor[1].get("name", metro_nome)
+        except Exception as e:
+            print(f"⚠️ Falha ao buscar metrô: {e}")
+
+        # parques (raio 800m, paginar resultados)
+        try:
+            total_parques = 0
+            park_resp = gmaps.places_nearby(location=(latitude, longitude), radius=800, type="park")
+            while park_resp:
+                total_parques += len(park_resp.get("results", []))
+                token = park_resp.get("next_page_token")
+                if token:
+                    time.sleep(2)
+                    park_resp = gmaps.places_nearby(page_token=token)
+                else:
+                    break
+            parques_800m = total_parques
+        except Exception as e:
+            print(f"⚠️ Falha ao buscar parques: {e}")
+
+        # escolas (raio 1000m, paginar resultados)
+        try:
+            total_escolas = 0
+            school_resp = gmaps.places_nearby(location=(latitude, longitude), radius=1000, type="school")
+            while school_resp:
+                total_escolas += len(school_resp.get("results", []))
+                token = school_resp.get("next_page_token")
+                if token:
+                    time.sleep(2)
+                    school_resp = gmaps.places_nearby(page_token=token)
+                else:
+                    break
+            escolas_1000m = total_escolas
+        except Exception as e:
+            print(f"⚠️ Falha ao buscar escolas: {e}")
+
+        # mercados filtrados (raio 500m)
+        try:
+            market_resp = gmaps.places_nearby(location=(latitude, longitude), radius=500, type="supermarket")
+            lista = market_resp.get("results", [])
+            termos = [
+                "mercado", "supermercado", "atacadão", "big box",
+                "dona de casa", "pão de açúcar", "carrefour"
+            ]
+            mercados_500m = sum(
+                1 for r in lista
+                if any(term in r.get("name", "").lower() for term in termos)
+            )
+        except Exception as e:
+            print(f"⚠️ Falha ao buscar mercados: {e}")
         
         # ========== PASSO 2: CALCULAR CONDOMINIO_M2 ==========
         condominio_m2 = dados.Valor_Condominio / dados.Area_Util
         
-        # ========== PASSO 3: EXTRAIR DISTÂNCIAS DO DATASET ==========
-        distancia_metro_km = float(predio_row["Distancia_Metro_km"])
-        mercados_500m = float(predio_row["Mercados_500m"])
-        escolas_1000m = float(predio_row["Escolas_1000m"])
-        parques_800m = float(predio_row["Parques_800m"])
-        latitude = float(predio_row.get("Latitude", 0.0))
-        longitude = float(predio_row.get("Longitude", 0.0))
-        
-        # ========== PASSO 4: MONTAR DATAFRAME COM 7 VARIÁVEIS ==========
+        # ========== PASSO 3: MONTAR DATAFRAME COM 7 VARIÁVEIS ==========
         
         dados_modelo = {
             "Quartos": dados.Quartos,
@@ -247,7 +322,7 @@ async def prever_preco(dados: DadosImovelUsuario):
         ]
         df_entrada = df_entrada[colunas_esperadas]
         
-        # ========== PASSO 5: FAZER PREVISÃO ==========
+        # ========== PASSO 4: FAZER PREVISÃO ==========
         predicao = modelo_ml.predict(df_entrada)
         preco_m2_sugerido = float(predicao[0])
         
@@ -258,12 +333,13 @@ async def prever_preco(dados: DadosImovelUsuario):
         preco_m2_minimo = round(preco_m2_sugerido * 0.95, 6)
         preco_m2_maximo = round(preco_m2_sugerido * 1.05, 6)
 
-        # ========== PASSO 6: RETORNAR RESPOSTA (inclui localização) ==========
+        # ========== PASSO 5: RETORNAR RESPOSTA (inclui localização) ==========
         return RespostaPrevicao(
             preco_m2_minimo=preco_m2_minimo,
             preco_m2_sugerido=preco_m2_sugerido,
             preco_m2_maximo=preco_m2_maximo,
             Distancia_Metro_km=distancia_metro_km,
+            metro_nome=metro_nome,
             Mercados_500m=mercados_500m,
             Escolas_1000m=escolas_1000m,
             Parques_800m=parques_800m,
@@ -306,7 +382,7 @@ if __name__ == "__main__":
     import uvicorn
     
     print("=" * 70)
-    print("🚀 Iniciando PrevIsmob API v2.0 (Com Dataset CSV)")
+    print("🚀 Iniciando PrevIsmob API v2.0 (Geocoding em tempo real com Google Maps)")
     print("=" * 70)
     print(f"📍 URL: http://localhost:8000")
     print(f"📚 Documentação: http://localhost:8000/docs")

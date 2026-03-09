@@ -32,7 +32,10 @@ numpy==1.26.2
 # ========================================================================
 
 # python-dotenv - Carregamento de variáveis de ambiente (.env)
-# python-dotenv==1.0.0
+python-dotenv==1.0.0
+
+# Google Maps API client
+googlemaps==4.10.0
 
 # pytest - Framework de testes
 # pytest==7.4.3

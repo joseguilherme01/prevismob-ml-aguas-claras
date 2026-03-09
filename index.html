@@ -5,681 +5,835 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="PrevIsmob - Sistema de Previsão de Preços de Imóveis em Águas Claras"
+      content="PrevIsmob — Avaliação inteligente de imóveis em Águas Claras, DF."
     />
-    <title>PrevIsmob - Calculadora de Preços de Imóveis</title>
-
-    <style>
-      /* =====================================================================
-         RESET E VARIÁVEIS GLOBAIS
-         ===================================================================== */
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --cor-primaria: #3b82f6;
-        --cor-primaria-escuro: #1e40af;
-        --cor-texto: #e5e7eb;
-        --cor-textarea: #1f2937;
-        --cor-fundo: #111827;
-        --cor-fundo-secao: #1f2937;
-        --cor-borda: #374151;
-        --cor-sucesso: #10b981;
-        --cor-aviso: #f59e0b;
-        --cor-erro: #ef4444;
-        --sombra: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-        --sombra-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      }
-
-      /* =====================================================================
-         ESTILOS GERAIS
-         ===================================================================== */
-
-      html {
-        scroll-behavior: smooth;
-        height: 100%;
-      }
-
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
-        color: var(--cor-texto);
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* =====================================================================
-         CONTAINER PRINCIPAL
-         ===================================================================== */
-
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 2rem;
-        flex: 1;
-      }
-
-      /* =====================================================================
-         HEADER / CABEÇALHO
-         ===================================================================== */
-
-      header {
-        text-align: center;
-        margin-bottom: 3rem;
-        padding: 2rem 0;
-        border-bottom: 2px solid var(--cor-borda);
-      }
-
-      header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, var(--cor-primaria), #60a5fa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      header p {
-        color: #9ca3af;
-        font-size: 1.1rem;
-      }
-
-      /* =====================================================================
-         FORMULÁRIO
-         ===================================================================== */
-
-      .formulario-secao {
-        background: var(--cor-fundo-secao);
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.75rem;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: var(--sombra);
-      }
-
-      .formulario-secao h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        color: var(--cor-primaria);
-        display: flex;
-        align-items: center;
-      }
-
-      .formulario-secao h2::before {
-        content: "";
-        display: inline-block;
-        width: 4px;
-        height: 24px;
-        background: var(--cor-primaria);
-        border-radius: 2px;
-        margin-right: 0.75rem;
-      }
-
-      .formulario-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .campo-grupo {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .campo-grupo label {
-        font-size: 0.9rem;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-        color: #d1d5db;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .campo-grupo input {
-        padding: 0.75rem;
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.5rem;
-        background: var(--cor-textarea);
-        color: var(--cor-texto);
-        font-size: 1rem;
-        transition: all 0.3s ease;
-      }
-
-      .campo-grupo input:hover {
-        border-color: var(--cor-primaria);
-      }
-
-      .campo-grupo input:focus {
-        outline: none;
-        border-color: var(--cor-primaria);
-        background: var(--cor-textarea);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-      }
-
-      .campo-grupo input::placeholder {
-        color: #6b7280;
-      }
-
-      /* Estilos para Select (Dropdown) */
-
-      .campo-grupo select {
-        padding: 0.75rem;
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.5rem;
-        background: var(--cor-textarea);
-        color: var(--cor-texto);
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .campo-grupo select:hover {
-        border-color: var(--cor-primaria);
-      }
-
-      .campo-grupo select:focus {
-        outline: none;
-        border-color: var(--cor-primaria);
-        background: var(--cor-textarea);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-      }
-
-      .campo-grupo select option {
-        background: var(--cor-fundo);
-        color: var(--cor-texto);
-      }
-
-      /* =====================================================================
-         BOTÃO
-         ===================================================================== */
-
-      .botao-container {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      button {
-        flex: 1;
-        padding: 0.875rem 2rem;
-        border: none;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .btn-calcular {
-        background: linear-gradient(
-          135deg,
-          var(--cor-primaria),
-          var(--cor-primaria-escuro)
-        );
-        color: white;
-      }
-
-      .btn-calcular:hover:not(:disabled) {
-        transform: translateY(-2px);
-        box-shadow: var(--sombra-lg);
-      }
-
-      .btn-calcular:active:not(:disabled) {
-        transform: translateY(0);
-      }
-
-      .btn-calcular:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-
-      .btn-limpar {
-        background: transparent;
-        color: var(--cor-texto);
-        border: 1px solid var(--cor-borda);
-      }
-
-      .btn-limpar:hover {
-        background: var(--cor-borda);
-      }
-
-      /* =====================================================================
-         RESULTADO
-         ===================================================================== */
-
-      .resultado-secao {
-        background: var(--cor-fundo-secao);
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.75rem;
-        padding: 2rem;
-        box-shadow: var(--sombra);
-        display: none;
-        animation: slideIn 0.3s ease;
-      }
-
-      .resultado-secao.visivel {
-        display: block;
-      }
-
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .resultado-secao h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        color: var(--cor-sucesso);
-        display: flex;
-        align-items: center;
-      }
-
-      .resultado-secao h2::before {
-        content: "✓";
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background: var(--cor-sucesso);
-        color: white;
-        border-radius: 50%;
-        margin-right: 0.75rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .resultado-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .resultado-card {
-        background: linear-gradient(
-          135deg,
-          var(--cor-fundo) 0%,
-          var(--cor-textarea) 100%
-        );
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.5rem;
-        padding: 1.5rem;
-        text-align: center;
-      }
-
-      .resultado-label {
-        font-size: 0.9rem;
-        color: #9ca3af;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 0.5rem;
-      }
-
-      /* Badges de localização */
-      .local-badges {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-      }
-
-      .badge {
-        background: rgba(59, 130, 246, 0.08);
-        border: 1px solid rgba(59, 130, 246, 0.12);
-        color: var(--cor-texto);
-        padding: 0.4rem 0.6rem;
-        border-radius: 999px;
-        font-size: 0.875rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      /* Cards para mínimo / sugerido / máximo */
-      .resultado-grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .card-min,
-      .card-sug,
-      .card-max {
-        background: linear-gradient(
-          135deg,
-          rgba(17, 24, 39, 0.6),
-          rgba(31, 41, 55, 0.6)
-        );
-        border: 1px solid var(--cor-borda);
-        border-radius: 0.75rem;
-        padding: 1.25rem;
-        text-align: center;
-      }
-
-      .card-sug {
-        border: 1px solid var(--cor-primaria);
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
-        transform: translateY(-4px);
-      }
-
-      .valor-card-label {
-        font-size: 0.85rem;
-        color: #9ca3af;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .valor-card-valor {
-        font-size: 1.45rem;
-        font-weight: 700;
-        color: var(--cor-sucesso);
-        font-family: "Courier New", monospace;
-      }
-
-      .resultado-valor {
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--cor-sucesso);
-        font-family: "Courier New", monospace;
-      }
-
-      /* =====================================================================
-         MENSAGENS DE ERRO
-         ===================================================================== */
-
-      .mensagem-erro {
-        background: var(--cor-fundo-secao);
-        border-left: 4px solid var(--cor-erro);
-        border: 1px solid var(--cor-borda);
-        border-left: 4px solid var(--cor-erro);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        display: none;
-        animation: shake 0.3s ease;
-      }
-
-      .mensagem-erro.visivel {
-        display: block;
-      }
-
-      @keyframes shake {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(-10px);
-        }
-        75% {
-          transform: translateX(10px);
-        }
-      }
-
-      .mensagem-erro strong {
-        color: var(--cor-erro);
-      }
-
-      .mensagem-erro p {
-        color: #fecaca;
-        margin-top: 0.25rem;
-      }
-
-      /* =====================================================================
-         FOOTER
-         ===================================================================== */
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        border-top: 1px solid var(--cor-borda);
-        color: #6b7280;
-        font-size: 0.9rem;
-        margin-top: auto;
-      }
-
-      /* =====================================================================
-         RESPONSIVIDADE
-         ===================================================================== */
-
-      @media (max-width: 768px) {
-        .container {
-          padding: 1rem;
-        }
-
-        header h1 {
-          font-size: 1.8rem;
-        }
-
-        .formulario-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .botao-container {
-          flex-direction: column;
-        }
-
-        .resultado-cards {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* =====================================================================
-         MODO DE CARREGAMENTO
-         ===================================================================== */
-
-      .carregando {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        border: 2px solid var(--cor-borda);
-        border-top-color: var(--cor-primaria);
-        border-radius: 50%;
-        animation: spin 0.6s linear infinite;
-        margin-left: 0.5rem;
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+    <title>PrevIsmob — Inteligência Imobiliária</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- ================================================================
-         CABEÇALHO
-         ================================================================ -->
-    <header>
-      <h1>💰 PrevIsmob</h1>
-      <p>Descubra o valor estimado do seu imóvel em Águas Claras</p>
-    </header>
+    <!-- ============================================================
+       LANDING PAGE
+       ============================================================ -->
+    <div id="landing-section">
+      <!-- NAV -->
+      <nav class="nav" id="main-nav">
+        <div class="nav__container">
+          <a class="nav__brand" href="#">
+            <span class="nav__logo-icon" aria-hidden="true">◈</span>
+            PrevIsmob
+          </a>
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#vantagens">Vantagens</a></li>
+            <li><a href="#quem-usa">Quem usa</a></li>
+          </ul>
+          <button class="btn btn--primary nav__cta" id="btn-comecar">
+            Avaliar Imóvel
+          </button>
+          <button
+            class="nav__hamburger"
+            id="nav-hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
 
-    <!-- ================================================================
-         CONTAINER PRINCIPAL
-         ================================================================ -->
-    <div class="container">
-      <!-- Mensagem de Erro -->
-      <div id="mensagemErro" class="mensagem-erro">
-        <strong>⚠️ Erro na Previsão</strong>
-        <p id="textoErro"></p>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Powered by Machine Learning</p>
+            <h1 class="hero__title">
+              Descubra o valor <span class="highlight">real</span><br />do seu
+              imóvel
+            </h1>
+            <p class="hero__sub">
+              Análise inteligente baseada em dados de mercado, localização e
+              pontos de interesse para condomínios de Águas Claras — DF.
+            </p>
+            <div class="hero__cta-group">
+              <button class="btn btn--primary btn--lg card-button">
+                <span aria-hidden="true">⚡</span> Começar análise grátis
+              </button>
+              <a href="#como-funciona" class="btn btn--ghost btn--lg"
+                >Como funciona ↓</a
+              >
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <strong>+3.200</strong><span>Imóveis analisados</span>
+              </div>
+              <div class="hero__stat">
+                <strong>94%</strong><span>Precisão do modelo</span>
+              </div>
+              <div class="hero__stat">
+                <strong>&lt; 3s</strong><span>Tempo de resposta</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__card">
+              <div class="hero__card-header">
+                <span class="badge badge--success">● Análise concluída</span>
+                <span class="hero__card-condo">Ed. Supremo</span>
+              </div>
+              <div class="hero__card-prices">
+                <div class="hero__price-row hero__price-row--min">
+                  <span>Mínimo</span><strong>R$ 680.000</strong>
+                </div>
+                <div class="hero__price-row hero__price-row--sug">
+                  <span>Sugerido</span><strong>R$ 745.000</strong>
+                </div>
+                <div class="hero__price-row hero__price-row--max">
+                  <span>Máximo</span><strong>R$ 810.000</strong>
+                </div>
+              </div>
+              <div class="hero__card-tags">
+                <span class="tag">📍 1,2 km do metrô</span>
+                <span class="tag">🏪 3 mercados</span>
+                <span class="tag">80 m²</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="section" id="como-funciona">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">Processo</p>
+            <h2 class="section__title">Como funciona?</h2>
+            <p class="section__sub">
+              Quatro etapas para uma avaliação precisa e confiável
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step" data-animate>
+              <div class="step__aside">
+                <div class="step__number">01</div>
+                <div class="step__icon">📍</div>
+                <div class="step__line" aria-hidden="true"></div>
+              </div>
+              <div class="step__body">
+                <h3>Localização</h3>
+                <p>
+                  Selecione o condomínio e nossa IA identifica automaticamente
+                  as coordenadas GPS, a distância ao metrô mais próximo e o
+                  contexto urbano completo da região.
+                </p>
+              </div>
+            </div>
+
+            <div class="step" data-animate>
+              <div class="step__aside">
+                <div class="step__number">02</div>
+                <div class="step__icon">🏪</div>
+                <div class="step__line" aria-hidden="true"></div>
+              </div>
+              <div class="step__body">
+                <h3>Pontos de Interesse</h3>
+                <p>
+                  Mapeamos mercados num raio de 500 m, escolas a 1 km e parques
+                  a 800 m — todos os fatores que impactam diretamente no valor
+                  do imóvel.
+                </p>
+              </div>
+            </div>
+
+            <div class="step" data-animate>
+              <div class="step__aside">
+                <div class="step__number">03</div>
+                <div class="step__icon">🏢</div>
+                <div class="step__line" aria-hidden="true"></div>
+              </div>
+              <div class="step__body">
+                <h3>Características</h3>
+                <p>
+                  Informe área útil, número de quartos, vagas de garagem e valor
+                  do condomínio para personalizar a análise ao seu imóvel
+                  específico.
+                </p>
+              </div>
+            </div>
+
+            <div class="step step--last" data-animate>
+              <div class="step__aside">
+                <div class="step__number">04</div>
+                <div class="step__icon">📊</div>
+              </div>
+              <div class="step__body">
+                <h3>Resultado</h3>
+                <p>
+                  Receba três faixas de precificação — mínima, sugerida e máxima
+                  — com mapa interativo da localização e métricas detalhadas de
+                  contexto urbano.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VANTAGENS -->
+      <section class="section section--alt" id="vantagens">
+        <div class="container">
+          <div class="vantagens">
+            <div class="vantagens__img-col">
+              <img
+                src="assets/vantagens.jpg"
+                alt="Profissional analisando dados imobiliários"
+                class="vantagens__img"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="vantagens__content-col">
+              <p class="section__eyebrow">Por que usar</p>
+              <h2 class="section__title section__title--left">
+                Vantagens do<br />PrevIsmob
+              </h2>
+              <ul class="benefits-list">
+                <li class="benefit-item" data-animate>
+                  <div class="benefit-icon" aria-hidden="true">✦</div>
+                  <div>
+                    <strong>Dados reais de mercado</strong>
+                    <p>
+                      Modelo treinado com +3.200 transações reais de Águas
+                      Claras — sem estimativas genéricas ou tabelas
+                      desatualizadas.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit-item" data-animate>
+                  <div class="benefit-icon" aria-hidden="true">✦</div>
+                  <div>
+                    <strong>Georreferenciamento automático</strong>
+                    <p>
+                      Captamos distância ao metrô, mercados, escolas e parques
+                      para cada condomínio sem nenhum input extra.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit-item" data-animate>
+                  <div class="benefit-icon" aria-hidden="true">✦</div>
+                  <div>
+                    <strong>Três faixas de precificação</strong>
+                    <p>
+                      Não apenas um preço — mínimo, sugerido e máximo para
+                      embasar qualquer tipo de negociação.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit-item" data-animate>
+                  <div class="benefit-icon" aria-hidden="true">✦</div>
+                  <div>
+                    <strong>Rápido, gratuito e sem cadastro</strong>
+                    <p>
+                      Resultado em menos de 3 segundos, sem criação de conta,
+                      sem custo e sem anúncios.
+                    </p>
+                  </div>
+                </li>
+                <li class="benefit-item" data-animate>
+                  <div class="benefit-icon" aria-hidden="true">✦</div>
+                  <div>
+                    <strong>Mapa interativo integrado</strong>
+                    <p>
+                      Visualize a localização exata do imóvel analisado
+                      diretamente no painel de resultados.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUEM PODE USAR -->
+      <section class="section quem-usa" id="quem-usa">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow section__eyebrow--light">Para quem é</p>
+            <h2 class="section__title section__title--light">
+              Quem pode usar?
+            </h2>
+            <p class="section__sub section__sub--light">
+              Uma ferramenta para todos os atores do mercado imobiliário
+            </p>
+          </div>
+          <div class="personas">
+            <div class="persona-card" data-animate>
+              <div class="persona-card__icon" aria-hidden="true">🏠</div>
+              <h3>Compradores</h3>
+              <p>
+                Descubra se o preço pedido está dentro da faixa de mercado antes
+                de fechar qualquer negócio.
+              </p>
+              <ul>
+                <li>Evite pagar acima do mercado</li>
+                <li>Compare condomínios facilmente</li>
+                <li>Negocie com dados concretos</li>
+              </ul>
+            </div>
+
+            <div class="persona-card persona-card--featured" data-animate>
+              <div class="persona-card__badge">Mais usado</div>
+              <div class="persona-card__icon" aria-hidden="true">📈</div>
+              <h3>Investidores</h3>
+              <p>
+                Identifique oportunidades de valorização com base em dados reais
+                de mercado e localização estratégica.
+              </p>
+              <ul>
+                <li>Análise de retorno por m²</li>
+                <li>Comparativo entre condomínios</li>
+                <li>Decisões embasadas em dados</li>
+              </ul>
+            </div>
+
+            <div class="persona-card" data-animate>
+              <div class="persona-card__icon" aria-hidden="true">🤝</div>
+              <h3>Corretores</h3>
+              <p>
+                Ofereça laudos rápidos e credíveis para seus clientes
+                diretamente no atendimento.
+              </p>
+              <ul>
+                <li>Agilize o processo de avaliação</li>
+                <li>Embase suas comissões</li>
+                <li>Diferencial competitivo imediato</li>
+              </ul>
+            </div>
+          </div>
+          <div class="quem-usa__cta">
+            <button class="btn btn--primary btn--lg card-button">
+              Experimentar agora — é grátis
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__brand">
+              <span class="nav__logo-icon" aria-hidden="true">◈</span>
+              <strong>PrevIsmob</strong>
+              <p>
+                Inteligência artificial para o mercado imobiliário de Águas
+                Claras — DF.
+              </p>
+            </div>
+            <p class="footer__copy">
+              © 2026 PrevIsmob · Dados para fins educacionais
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- /landing-section -->
+
+    <!-- ============================================================
+       APP — DASHBOARD DE PREVISÃO
+       ============================================================ -->
+    <div id="app-section" style="display: none">
+      <!-- HEADER DO DASHBOARD -->
+      <header class="dash-header">
+        <div class="dash-header__inner">
+          <button class="btn btn--ghost btn--sm" id="btn-voltar">
+            ← Voltar
+          </button>
+          <div class="dash-header__brand">
+            <span class="nav__logo-icon" aria-hidden="true">◈</span>
+            <span>PrevIsmob</span>
+          </div>
+          <span class="dash-header__tag">Análise de Imóvel</span>
+        </div>
+      </header>
+
+      <!-- BANNER DE ERRO -->
+      <div
+        class="erro-banner"
+        id="mensagemErro"
+        role="alert"
+        aria-live="assertive"
+      >
+        <div class="erro-banner__inner">
+          <span class="erro-banner__icon" aria-hidden="true">⚠</span>
+          <span id="textoErro"></span>
+          <button
+            class="erro-banner__close"
+            aria-label="Fechar erro"
+            onclick="
+              document
+                .getElementById('mensagemErro')
+                .classList.remove('visivel', 'critico')
+            "
+          >
+            ✕
+          </button>
+        </div>
       </div>
 
-      <!-- FORMULÁRIO -->
-      <section class="formulario-secao">
-        <h2>Informações do Imóvel</h2>
-
-        <form
-          id="formularioImovel"
-          onsubmit="
-            event.preventDefault();
-            calcularValor();
-          "
-        >
-          <!-- SEÇÃO 1: SELEÇÃO DE CONDOMÍNIO E DADOS DO IMÓVEL -->
-          <div class="formulario-grid">
-            <!-- Nome do Prédio / Condomínio (Dropdown) -->
-            <div class="campo-grupo">
-              <label for="nome_predio">Condomínio / Prédio *</label>
-              <input
-                type="text"
-                id="nome_predio"
-                name="nome_predio"
-                list="lista_condominios"
-                placeholder="Digite ou busque seu condomínio..."
-                autocomplete="off"
-                required
-              />
-              <datalist id="lista_condominios"></datalist>
+      <main class="dash-main">
+        <div class="dash-grid">
+          <!-- PAINEL ESQUERDO: FORMULÁRIO -->
+          <aside class="dash-form-panel">
+            <div class="dash-form-panel__header">
+              <h2>📋 Dados do Imóvel</h2>
+              <p>
+                Preencha as características para obter a avaliação de mercado
+              </p>
             </div>
 
-            <!-- Área Útil (m²) -->
-            <div class="campo-grupo">
-              <label for="area_util">Área Útil (m²) *</label>
-              <input
-                type="number"
-                id="area_util"
-                name="area_util"
-                placeholder="Ex: 120"
-                step="0.01"
-                min="1"
-                required
-              />
+            <form id="formularioImovel" class="form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="nome_predio">Condomínio</label>
+                <div class="form-input-wrap">
+                  <span class="form-input-icon" aria-hidden="true">📍</span>
+                  <input
+                    type="text"
+                    id="nome_predio"
+                    name="nome_predio"
+                    class="form-input"
+                    placeholder="Digite o nome do condomínio..."
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="area_util"
+                    >Área útil (m²)</label
+                  >
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">📐</span>
+                    <input
+                      type="number"
+                      id="area_util"
+                      name="area_util"
+                      class="form-input"
+                      placeholder="Ex: 80"
+                      min="1"
+                      step="1"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="valor_condominio"
+                    >Condomínio (R$)</label
+                  >
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">💳</span>
+                    <input
+                      type="number"
+                      id="valor_condominio"
+                      name="valor_condominio"
+                      class="form-input"
+                      placeholder="Ex: 800"
+                      min="0"
+                      step="1"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quartos">Quartos</label>
+                  <div class="form-select-wrap">
+                    <select
+                      id="quartos"
+                      name="quartos"
+                      class="form-select"
+                      required
+                    >
+                      <option value="">Selecione</option>
+                      <option value="1">1 quarto</option>
+                      <option value="2">2 quartos</option>
+                      <option value="3">3 quartos</option>
+                      <option value="4">4 quartos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="vagas">Vagas</label>
+                  <div class="form-select-wrap">
+                    <select
+                      id="vagas"
+                      name="vagas"
+                      class="form-select"
+                      required
+                    >
+                      <option value="">Selecione</option>
+                      <option value="0">0 vaga</option>
+                      <option value="1">1 vaga</option>
+                      <option value="2">2 vagas</option>
+                      <option value="3">3 vagas</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn--primary btn--full"
+                id="btnCalcular"
+              >
+                <span aria-hidden="true">⚡</span> Calcular valor de mercado
+              </button>
+              <button
+                type="button"
+                class="btn btn--outline btn--full"
+                id="btnLimpar"
+              >
+                Limpar campos
+              </button>
+            </form>
+          </aside>
+
+          <!-- PAINEL DIREITO: RESULTADOS -->
+          <section class="dash-results-panel" id="resultado" aria-live="polite">
+            <!-- ESTADO VAZIO -->
+            <div class="results-empty" id="results-empty">
+              <div class="results-empty__icon" aria-hidden="true">🏢</div>
+              <h3>Aguardando análise</h3>
+              <p>
+                Preencha o formulário ao lado e clique em
+                <strong>Calcular</strong> para ver o resultado aqui.
+              </p>
             </div>
 
-            <!-- Valor do Condomínio (R$/mês) -->
-            <div class="campo-grupo">
-              <label for="valor_condominio">Condomínio Mensal (R$) *</label>
-              <input
-                type="number"
-                id="valor_condominio"
-                name="valor_condominio"
-                placeholder="Ex: 650"
-                step="0.01"
-                min="0"
-                required
-              />
+            <!-- CARDS DE PREÇO -->
+            <div class="price-cards" id="price-cards" style="display: none">
+              <div class="price-card price-card--min">
+                <div class="price-card__label">Valor Mínimo</div>
+                <div class="price-card__value" id="valorTotalMin">—</div>
+                <div class="price-card__sub">Piso de mercado</div>
+              </div>
+              <div class="price-card price-card--sug">
+                <div class="price-card__badge">Recomendado</div>
+                <div class="price-card__label">Valor Sugerido</div>
+                <div class="price-card__value" id="valorTotalSug">—</div>
+                <div class="price-card__sub">Preço justo de mercado</div>
+              </div>
+              <div class="price-card price-card--max">
+                <div class="price-card__label">Valor Máximo</div>
+                <div class="price-card__value" id="valorTotalMax">—</div>
+                <div class="price-card__sub">Teto de valorização</div>
+              </div>
             </div>
 
-            <!-- Quartos -->
-            <div class="campo-grupo">
-              <label for="quartos">Quartos *</label>
-              <input
-                type="number"
-                id="quartos"
-                name="quartos"
-                placeholder="Ex: 3"
-                step="1"
-                min="0"
-                required
-              />
+            <!-- MAPA + CONTEXTO URBANO -->
+            <div class="dash-map-row" id="dash-map-row" style="display: none">
+              <div class="dash-map-wrap">
+                <div class="dash-map-wrap__header">
+                  <span>🗺 Localização do imóvel</span>
+                  <span id="metro_nome" class="metro-badge">—</span>
+                </div>
+                <iframe
+                  id="mapa_iframe"
+                  class="mapa"
+                  title="Mapa de localização do imóvel analisado"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src=""
+                  allowfullscreen
+                ></iframe>
+                <div class="dash-map-wrap__footer">
+                  Fonte: © OpenStreetMap contributors
+                </div>
+              </div>
+
+              <div class="loc-badges-panel">
+                <h4 class="loc-badges-panel__title">Contexto Urbano</h4>
+                <div class="loc-badge">
+                  <div class="loc-badge__icon" aria-hidden="true">🚇</div>
+                  <div class="loc-badge__info">
+                    <span class="loc-badge__label">Distância ao Metrô</span>
+                    <strong><span id="loc_distancia">—</span> km</strong>
+                  </div>
+                </div>
+                <div class="loc-badge">
+                  <div class="loc-badge__icon" aria-hidden="true">🛒</div>
+                  <div class="loc-badge__info">
+                    <span class="loc-badge__label">Mercados (500 m)</span>
+                    <strong><span id="loc_mercados">—</span></strong>
+                  </div>
+                </div>
+                <div class="loc-badge">
+                  <div class="loc-badge__icon" aria-hidden="true">🎓</div>
+                  <div class="loc-badge__info">
+                    <span class="loc-badge__label">Escolas (1 km)</span>
+                    <strong><span id="loc_escolas">—</span></strong>
+                  </div>
+                </div>
+                <div class="loc-badge">
+                  <div class="loc-badge__icon" aria-hidden="true">🌳</div>
+                  <div class="loc-badge__info">
+                    <span class="loc-badge__label">Parques (800 m)</span>
+                    <strong><span id="loc_parques">—</span></strong>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Vagas -->
-            <div class="campo-grupo">
-              <label for="vagas">Vagas de Garagem *</label>
-              <input
-                type="number"
-                id="vagas"
-                name="vagas"
-                placeholder="Ex: 2"
-                step="1"
-                min="0"
-                required
-              />
+            <!-- GRÁFICO -->
+            <div class="chart-panel" id="chart-panel" style="display: none">
+              <div class="chart-panel__header">
+                <div>
+                  <h4>📈 Tendência de Preço por m²</h4>
+                  <span class="chart-panel__sub"
+                    >Últimos 7 meses — Águas Claras</span
+                  >
+                </div>
+                <div class="chart-legend">
+                  <span class="chart-legend__item chart-legend__item--blue"
+                    >Este imóvel</span
+                  >
+                  <span class="chart-legend__item chart-legend__item--gray"
+                    >Média do bairro</span
+                  >
+                </div>
+              </div>
+              <div class="chart-wrap">
+                <canvas
+                  id="graficoTendencia"
+                  aria-label="Gráfico de tendência de preço por m²"
+                ></canvas>
+              </div>
             </div>
-          </div>
-
-          <!-- BOTÕES -->
-          <div class="botao-container">
-            <button type="submit" class="btn-calcular" id="btnCalcular">
-              Calcular Valor
-            </button>
-            <button type="reset" class="btn-limpar" id="btnLimpar">
-              Limpar Formulário
-            </button>
-          </div>
-        </form>
-      </section>
-
-      <!-- RESULTADO -->
-      <section id="resultado" class="resultado-secao">
-        <h2>Resultado da Previsão</h2>
-
-        <!-- Badges de localização -->
-        <div class="local-badges" id="localBadges">
-          <div class="badge">
-            📍 Localização: <span id="loc_distancia">--</span> km
-          </div>
-          <div class="badge">
-            🛒 Mercados: <span id="loc_mercados">--</span>
-          </div>
-          <div class="badge">🏫 Escolas: <span id="loc_escolas">--</span></div>
-          <div class="badge">🌳 Parques: <span id="loc_parques">--</span></div>
+          </section>
+          <!-- /resultado -->
         </div>
-
-        <!-- Três Cards: Mínimo / Sugerido / Máximo -->
-        <div class="resultado-grid-3">
-          <div class="card-min">
-            <div class="valor-card-label">Valor Total (Mínimo)</div>
-            <div class="valor-card-valor" id="valorTotalMin">R$ 0,00</div>
-          </div>
-
-          <div class="card-sug">
-            <div class="valor-card-label">Valor Total (Sugerido)</div>
-            <div class="valor-card-valor" id="valorTotalSug">R$ 0,00</div>
-          </div>
-
-          <div class="card-max">
-            <div class="valor-card-label">Valor Total (Máximo)</div>
-            <div class="valor-card-valor" id="valorTotalMax">R$ 0,00</div>
-          </div>
-        </div>
-        <!-- Mapa incorporado -->
-        <div class="mapa-container">
-          <h3 style="margin-top: 1rem; font-size: 1rem; color: #9ca3af">
-            📍 Localização no Mapa
-          </h3>
-          <iframe
-            id="mapa_iframe"
-            width="100%"
-            height="300"
-            style="border: 0; border-radius: 0.75rem; margin-top: 0.75rem"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+        <!-- /dash-grid -->
+      </main>
     </div>
+    <!-- /app-section -->
 
-    <!-- ================================================================
-         RODAPÉ
-         ================================================================ -->
-    <footer>
-      <p>&copy; 2024 PrevIsmob - Sistema de Previsão de Preços de Imóveis</p>
-      <p>Desenvolvido com ❤️ usando Machine Learning</p>
-    </footer>
-
-    <!-- ================================================================
-         SCRIPT
-         ================================================================ -->
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="script.js"></script>
+    <!-- Campo de condomínio: texto livre — geocoding feito pelo backend (Google Maps Python client) -->
+    <script>
+      /* ============================================================
+       GRÁFICO DE TENDÊNCIA
+       ============================================================ */
+      var _graficoInstance = null;
+
+      function renderizarGrafico(precoSugM2) {
+        var ctx = document.getElementById("graficoTendencia").getContext("2d");
+        var meses = [
+          "Set/25",
+          "Out/25",
+          "Nov/25",
+          "Dez/25",
+          "Jan/26",
+          "Fev/26",
+          "Mar/26",
+        ];
+        var fatores = [0.96, 0.98, 0.99, 1.01, 1.02, 1.01, 1.0];
+        var dados = fatores.map(function (f) {
+          return Math.round(precoSugM2 * f);
+        });
+        var media = dados.map(function (v) {
+          return Math.round(v * 0.93);
+        });
+
+        if (_graficoInstance) {
+          _graficoInstance.destroy();
+        }
+
+        _graficoInstance = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: meses,
+            datasets: [
+              {
+                label: "Este imóvel",
+                data: dados,
+                borderColor: "#2d7dd2",
+                backgroundColor: "rgba(45,125,210,0.07)",
+                borderWidth: 2.5,
+                pointBackgroundColor: "#2d7dd2",
+                pointBorderColor: "#fff",
+                pointBorderWidth: 2,
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                fill: true,
+                tension: 0.4,
+              },
+              {
+                label: "Média do bairro",
+                data: media,
+                borderColor: "#94a3b8",
+                backgroundColor: "transparent",
+                borderWidth: 1.5,
+                borderDash: [6, 4],
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                fill: false,
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: "#0a1628",
+                titleColor: "#94a3b8",
+                bodyColor: "#fff",
+                padding: 12,
+                cornerRadius: 8,
+                callbacks: {
+                  label: function (c) {
+                    return (
+                      " R$ " +
+                      new Intl.NumberFormat("pt-BR").format(c.parsed.y) +
+                      "/m\u00b2"
+                    );
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                grid: { color: "#f1f5f9" },
+                ticks: {
+                  color: "#94a3b8",
+                  font: { family: "Inter", size: 11 },
+                  callback: function (v) {
+                    return "R$ " + new Intl.NumberFormat("pt-BR").format(v);
+                  },
+                },
+              },
+              x: {
+                grid: { display: false },
+                ticks: {
+                  color: "#94a3b8",
+                  font: { family: "Inter", size: 11 },
+                },
+              },
+            },
+          },
+        });
+      }
+
+      /* mostrar painéis de resultado e renderizar gráfico após API responder */
+      /* salva a referência ANTES de sobrescrever para evitar recursão infinita */
+      var _exibirResultadoOriginal = window.exibirResultado;
+      function exibirResultadoDash(
+        precoMin,
+        precoSug,
+        precoMax,
+        areaUtil,
+        localData,
+      ) {
+        document.getElementById("results-empty").style.display = "none";
+        document.getElementById("price-cards").style.display = "";
+        document.getElementById("dash-map-row").style.display = "";
+        document.getElementById("chart-panel").style.display = "";
+        /* usar _exibirResultadoOriginal para evitar loop recursivo */
+        _exibirResultadoOriginal(
+          precoMin,
+          precoSug,
+          precoMax,
+          areaUtil,
+          localData,
+        );
+        /* renderizar gráfico */
+        renderizarGrafico(precoSug);
+      }
+      /* sobrescrever referência global para que calcularValor() use esta versão */
+      window.exibirResultado = exibirResultadoDash;
+
+      /* ============================================================
+       BOTÃO LIMPAR
+       ============================================================ */
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnLimpar = document.getElementById("btnLimpar");
+        if (btnLimpar) {
+          btnLimpar.addEventListener("click", function () {
+            document.getElementById("formularioImovel").reset();
+            document.getElementById("results-empty").style.display = "";
+            document.getElementById("price-cards").style.display = "none";
+            document.getElementById("dash-map-row").style.display = "none";
+            document.getElementById("chart-panel").style.display = "none";
+            document.getElementById("mapa_iframe").src = "";
+            document.getElementById("resultado").classList.remove("visivel");
+          });
+        }
+      });
+
+      /* ============================================================
+       HAMBURGUER MENU (mobile)
+       ============================================================ */
+      var hamburger = document.getElementById("nav-hamburger");
+      var navLinksMb = document.getElementById("nav-links");
+      if (hamburger && navLinksMb) {
+        hamburger.addEventListener("click", function () {
+          var open = navLinksMb.classList.toggle("nav__links--open");
+          hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+
+      /* ============================================================
+       SCROLL ANIMATIONS — IntersectionObserver
+       ============================================================ */
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("animate-in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        document.querySelectorAll("[data-animate]").forEach(function (el) {
+          io.observe(el);
+        });
+      } else {
+        document.querySelectorAll("[data-animate]").forEach(function (el) {
+          el.classList.add("animate-in");
+        });
+      }
+
+      /* ============================================================
+       NAV: scroll spy — adiciona classe scrolled
+       ============================================================ */
+      window.addEventListener(
+        "scroll",
+        function () {
+          var nav = document.getElementById("main-nav");
+          if (nav) {
+            nav.classList.toggle("nav--scrolled", window.scrollY > 40);
+          }
+        },
+        { passive: true },
+      );
+    </script>
   </body>
 </html>
